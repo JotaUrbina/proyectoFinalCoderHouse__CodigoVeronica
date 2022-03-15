@@ -1,0 +1,104 @@
+/********** ESTILOS UNIVERSALES **********/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 320px;
+}
+body,
+a {
+  font-family: "Russo One", sans-serif;
+  color: #1a1a1a;
+}
+
+li {
+  list-style: none;
+}
+
+.rosado {
+  color: #ff45a2;
+}
+
+/********** HEADER **********/
+
+.header_container {
+  height: 10vh;
+  background-color: #f5f5f5;
+}
+.icon_container {
+  width: 70px;
+  height: 10vh;
+  background-color: #ff45a2;
+}
+.menu_icon {
+  color: white;
+}
+.xIcon_container {
+  background-color: #ff45a2;
+}
+
+.menuDesplegable_container {
+  background-color: #ff45a2;
+}
+
+/********** MAIN -- INDEX **********/
+
+.imgCarrusel_container img {
+  width: 225px;
+  height: 225px;
+  object-fit: cover;
+  border-top: 8px solid #ff45a2;
+  border-right: 8px solid #ff45a2;
+  border-bottom: 8px solid #ff45a2;
+  box-shadow: #1a1a1a 14px 0;
+}
+
+/********** MAIN -- NUEVO LANZAMIENTO **********/
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100vw;
+  height: 30px;
+  background-color: #ff45a2;
+  transform: rotate(5deg);
+}
+
+.marquee_2 {
+  transform: rotate(-5deg);
+}
+
+.marquee h2 {
+  min-width: 100%;
+  animation: marquee 3s linear infinite alternate-reverse;
+}
+
+.marquee_2 h2 {
+  min-width: 100%;
+  animation: marquee 3s linear infinite alternate;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+/********** FOOTER **********/
+
+footer {
+  background-color: #f5f5f5;
+}
+i {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+
+  font-style: normal;
+  color: #ff45a2;
+}
