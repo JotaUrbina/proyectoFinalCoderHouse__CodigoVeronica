@@ -30,7 +30,7 @@
         <div class="row h-100">
             <!------------LOGO------------>
             <div class="col-6 d-flex align-items-center">
-                <a href="./index.html">
+                <a href="./index.html" class="logo_link">
                     <h1 class="ms-2 mb-0 fs-4"><span class="rosado">&lsaquo;</span>código verónica<span span
                             class="rosado">&rsaquo;</span>
                     </h1>
@@ -73,26 +73,23 @@
     <main class="container-fluid">
 
         <!------------CARRUSEL------------>
-        <section class="row m-0">
-            <div id="carouselExampleInterval" class="carousel slide carousel-fade col-12 mt-5" data-bs-ride="carousel">
-                <div class="carousel-inner container">
-                    <div class="carousel-item active imgCarrusel_container" data-bs-interval="3000">
-                        <img src="./img/guitarrista.jpg" class="d-block img-fluid mx-auto rounded-circle" alt="...">
+        <section class="container-fluid p-0 m-0">
+            <div id="carouselExampleInterval" class="carousel slide carousel-fade row mt-5 p-0" data-bs-ride="carousel">
+                <div class="carousel-inner p-0">
+                    <div class="carousel-item active imgCarrusel_container mx-auto" data-bs-interval="3000">
+                        <img src="./img/guitarrista.jpg" class="rounded-circle" alt="...">
                     </div>
 
-                    <div class="carousel-item rounded-circle imgCarrusel_container imgCarrusel_2"
-                        data-bs-interval="3000">
-                        <img src="./img/bajista.jpg" class="d-block img-fluid mx-auto rounded-circle" alt="...">
+                    <div class="carousel-item imgCarrusel_container mx-auto"" data-bs-interval=" 3000">
+                        <img src="./img/bajista.jpg" class="rounded-circle" alt="...">
                     </div>
 
-                    <div class="carousel-item rounded-circle imgCarrusel_container imgCarrusel_3"
-                        data-bs-interval="3000">
-                        <img src="./img/baterista.jpg" class="d-block img-fluid mx-auto rounded-circle" alt="...">
+                    <div class="carousel-item imgCarrusel_container  mx-auto"" data-bs-interval=" 3000">
+                        <img src="./img/baterista.jpg" class="rounded-circle" alt="...">
                     </div>
 
-                    <div class="carousel-item rounded-circle imgCarrusel_container imgCarrusel_4"
-                        data-bs-interval="3000">
-                        <img src="./img/vocalista.jpg" class="d-block img-fluid mx-auto rounded-circle" alt="...">
+                    <div class="carousel-item imgCarrusel_container mx-auto"" data-bs-interval=" 3000">
+                        <img src="./img/vocalista.jpg" class="rounded-circle" alt="...">
                     </div>
                 </div>
             </div>
@@ -112,45 +109,49 @@
                 </h2>
             </div>
             <!------------DISCO------------>
-            <div class="col-12 mt-4">
-
+            <div class="col-12 mt-5 pt-3">
                 <!------------CARDS CANCIONES------------>
+                <div class="row cardDisc_container">
+                    <div class="caos_container mt-5 d-flex flex-column align-items-center">
+                        <p class="m-0 caos_subtitle_1">nuevo disco</p>
+                        <h2 class="m-0 caos_title">Caos<span class="punto"></span></h2>
+                        <p class="m-0 caos_subtitle_2">y cosas de siempre</p>
+                    </div>
 
-                <div class="caos_container d-flex flex-column align-items-center">
-                    <p class="m-0">nuevo disco</p>
-                    <h2 class="m-0 fs-1">Caos<span class="punto">.</span></h2>
-                    <p class="m-0">y cosas de siempre</p>
-                </div>
-
-                <div class="row">
-                    <div class="card col-md-6 col-lg-4">
+                    <div class="card col-md-6 g-lg-5 mw-50 cardDiscSong_container">
                         <div class="card-body d-flex justify-content-between align-items-center">
                             <h5 class="card-title m-0">18</h5>
-                            <a href="#" class="btn btn-primary">play</a>
+                            <a href="#" class="btn cardBtn cardBtn__disc">play</a>
                         </div>
                     </div>
-                    <div class="card col-md-6 col-lg-4">
+                    <div class="card col-md-6 g-lg-5 mw-50 cardDiscSong_container">
                         <div class="card-body d-flex justify-content-between align-items-center">
                             <h5 class="card-title m-0">otra vez</h5>
-                            <a href="#" class="btn btn-primary">play</a>
+                            <a href="#" class="btn cardBtn cardBtn__disc">play</a>
                         </div>
                     </div>
-                    <div class="card col-md-6 col-lg-4">
+                    <div class="card col-md-6 g-lg-5 cardDiscSong_container">
                         <div class=" card-body d-flex justify-content-between align-items-center">
                             <h5 class="card-title m-0">se va a derrumbar</h5>
-                            <a href="#" class="btn btn-primary">play</a>
+                            <a href="#" class="btn cardBtn cardBtn__disc">play</a>
                         </div>
                     </div>
-                    <div class="card col-md-6">
+                    <div class="card col-md-6 g-lg-5 cardDiscSong_container">
                         <div class=" card-body d-flex justify-content-between align-items-center">
                             <h5 class="card-title m-0">todo va a estar bien</h5>
-                            <a href="#" class="btn btn-primary">play</a>
+                            <a href="#" class="btn cardBtn cardBtn__disc">play</a>
                         </div>
                     </div>
-                    <div class="card col-lg-6">
+                    <div class="card col-md-6 g-lg-5 mb-md-5 cardDiscSong_container">
                         <div class="card-body d-flex justify-content-between align-items-center">
                             <h5 class="card-title m-0">mis latidos</h5>
-                            <a href="#" class="btn btn-primary">play</a>
+                            <a href="#" class="btn cardBtn cardBtn__disc">play</a>
+                        </div>
+                    </div>
+                    <div class="card col-md-6 g-lg-5 mb-5 mb-md-5 cardDiscSong_container">
+                        <div class="card-body d-flex justify-content-between align-items-center">
+                            <h5 class="card-title m-0">vale la pena</h5>
+                            <a href="#" class="btn cardBtn cardBtn__disc">play</a>
                         </div>
                     </div>
                 </div>
@@ -158,18 +159,19 @@
         </section>
 
         <!------------GALERÍA------------>
-        <section class="row mt-5 mb-5">
-            <h2 class="fs-1 text-center"><span class="rosado">&lsaquo;</span>galería<span class="rosado">&rsaquo;</span>
+        <section class="container-fluid mt-5 mb-5">
+            <h2 class="text-center main_title"><span class="rosado">&lsaquo;</span>galería<span
+                    class="rosado">&rsaquo;</span>
             </h2>
-            <p class="text-center">Lollapalooza 2019, Chile</p>
-            <div class="row">
-                <div class="w-50 col-6">
-                    <img src="./img/bajista.jpg" alt="" class="img-fluid">
+            <p class="text-center main_subtitle">Lollapalooza 2019, Chile</p>
+            <div class="row mt-5 g-1 galeria_container">
+                <div class="mx-auto imgGaleria_container imgGaleria_1">
+                    <img src=" ./img/bajista.jpg" alt="" class="img-fluid">
                 </div>
-                <div class="w-50 col-6">
+                <div class="mx-auto imgGaleria_container imgGaleria_2">
                     <img src="./img/img_1.jpg" alt="" class="img-fluid">
                 </div>
-                <div class="w-50 col-6">
+                <div class="mx-auto imgGaleria_container imgGaleria_3">
                     <img src="./img/img_2.jpg" alt="" class="img-fluid">
                 </div>
             </div>
@@ -177,20 +179,23 @@
     </main>
 
     <!------------FOOTER------------>
-    <footer class="container-fluid position-relative bottom-0">
+    <footer class="container-fluid d-flex justify-content-center align-items-centerposition-relative bottom-0">
         <div class="row">
             <div
-                class="mt-2 pb-2 d-flex justify-content-center align-items-center border-2 border-bottom col-md-6 pb-md-0 justify-content-md-start border-bottom-md-0">
+                class="p-2 p-md-0 d-flex justify-content-center align-items-center col-md-6 pb-md-0 justify-content-md-start rrssFoot_container">
                 <a href="" class="ms-2 me-2">Instagram</a>
                 <a href="" class="ms-2 me-2">Facebook</a>
                 <a href="" class="ms-2 me-2">Youtube</a>
             </div>
 
-            <div class="mt-2 d-flex justify-content-center align-items-center col-md-6 justify-content-md-end">
-                <p class="m-0">Escúchanos en:</p>
+            <div class="p-2 p-md-0 d-flex justify-content-around align-items-center col-md-6 justify-content-md-end">
+                <p class="m-0 listenFoot_txt">Escúchanos en:</p>
                 <i class="bi bi-spotify ms-2 me-2 fs-5">Spotify</i>
                 <i class="bi bi-apple ms-2 me-2 fs-5">MUSIC</i>
             </div>
+            <p class="text-center m-0 align-self-end d-block align-self-md-start copyFoot_txt">Código Verónica 2022 -
+                Todos los derechos
+                reservados</p>
         </div>
     </footer>
 

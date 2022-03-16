@@ -30,7 +30,7 @@
         <div class="row h-100">
             <!------------LOGO------------>
             <div class="col-6 d-flex align-items-center">
-                <a href="../index.html">
+                <a href="../index.html" class="logo_link">
                     <h1 class="ms-2 mb-0 fs-4"><span class="rosado">&lsaquo;</span>código verónica<span span
                             class="rosado">&rsaquo;</span>
                     </h1>
@@ -73,48 +73,49 @@
     <!------------MAIN -- CONTACTO------------>
     <main class="container_fluid">
         <section class="row w-100 m-0 mt-5 d-flex flex-column justify-content-center align-items-center">
-            <h2 class="fs-1 text-center m-0 p-0"><span class="rosado">&lsaquo;</span>contacto<span
+            <h2 class="text-center m-0 p-0 main_title"><span class="rosado">&lsaquo;</span>contacto<span
                     class="rosado">&rsaquo;</span>
             </h2>
-            <p class="text-center col-12 w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <p class="text-center col-12 mx-auto main_subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
                 Deleniti, ea?
             </p>
 
             <!------------FORMULARIO------------>
-            <form action="" class="form_container mx-auto w-50 p-0">
-                <div class="input_container d-flex mb-3">
-                    <input class="form_input w-50 ps-2 m-e1" type="text" id="nombre" name="nombre" placeholder="nombre"
+            <div class="bgForm">
+                <form action="" class="row mx-auto mt-5 g-3 form_container">
+                    <input class="col-6 gx-1 ps-2 form_input" type="text" id="nombre" name="nombre" placeholder="nombre"
                         required>
-                    <input class="form_input w-50 ps-2 ms-1" type="text" id="apellido" name="apellido"
+                    <input class="col-6 gx-1 ps-2 form_input" type="text" id="apellido" name="apellido"
                         placeholder="apellido" required>
-                </div>
-
-                <input class="form_input w-100 ps-2 mb-3" type="email" id="email" name="email" placeholder="email"
-                    required>
-
-                <textarea class="form_input textarea_input w-100 ps-2 mb-3" name="mensaje" id="mensaje" cols="30"
-                    rows="10" placeholder="mensaje" required></textarea>
-
-                <input type="submit" value="Enviar" class="btn btn-outline-secondary">
-            </form>
+                    <input class="form_input ps-2 " type="email" id="email" name="email" placeholder="email" required>
+                    <textarea class="form_input textarea_input ps-2 mb-3" name="mensaje" id="mensaje" cols="30"
+                        rows="10" placeholder="mensaje" required></textarea>
+                    <button type="submit"
+                        class="form_btn mb-5 ms-auto d-flex justify-content-center align-items-center">&rsaquo;</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <!------------FOOTER------------>
-    <footer class="container-fluid position-relative bottom-0">
+    <footer class="container-fluid d-flex justify-content-center align-items-centerposition-relative bottom-0">
         <div class="row">
             <div
-                class="mt-2 pb-2 d-flex justify-content-center align-items-center border-2 border-bottom col-md-6 pb-md-0 justify-content-md-start border-bottom-md-0">
+                class="p-2 p-md-0 d-flex justify-content-center align-items-center col-md-6 pb-md-0 justify-content-md-start rrssFoot_container">
                 <a href="" class="ms-2 me-2">Instagram</a>
                 <a href="" class="ms-2 me-2">Facebook</a>
                 <a href="" class="ms-2 me-2">Youtube</a>
             </div>
 
-            <div class="mt-2 d-flex justify-content-center align-items-center col-md-6 justify-content-md-end">
-                <p class="m-0">Escúchanos en:</p>
+            <div class="p-2 p-md-0 d-flex justify-content-around align-items-center col-md-6 justify-content-md-end">
+                <p class="m-0 listenFoot_txt">Escúchanos en:</p>
                 <i class="bi bi-spotify ms-2 me-2 fs-5">Spotify</i>
                 <i class="bi bi-apple ms-2 me-2 fs-5">MUSIC</i>
             </div>
+            <p class="text-center m-0 align-self-end d-block align-self-md-start copyFoot_txt">Código Verónica 2022 -
+                Todos los derechos
+                reservados</p>
         </div>
     </footer>
     <!------------BUNDLE JS BOOTSTRAP------------>

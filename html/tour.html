@@ -30,7 +30,7 @@
         <div class="row h-100">
             <!------------LOGO------------>
             <div class="col-6 d-flex align-items-center">
-                <a href="../index.html">
+                <a href="../index.html" class="logo_link">
                     <h1 class="ms-2 mb-0 fs-4"><span class="rosado">&lsaquo;</span>código verónica<span span
                             class="rosado">&rsaquo;</span>
                     </h1>
@@ -71,70 +71,111 @@
     </header>
 
     <!------------MAIN -- TOUR------------>
-    <main class="container_fluid">
-        <section class="row w-100 m-0 mt-5">
-            <h2 class="fs-1 text-center m-0 p-0"><span class="rosado">&lsaquo;</span>tour<span
+    <main class="container-fluid">
+        <section class="container-fluid">
+            <h2 class="text-center m-0 mt-5 p-0 main_title"><span class="rosado">&lsaquo;</span>tour<span
                     class="rosado">&rsaquo;</span>
             </h2>
-            <p class="text-center w-50 mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, ea?
+            <p class="text-center col-12 col-sm-8 col-md-6 w-sm-25 mx-auto main_subtitle">Lorem ipsum dolor sit amet,
+                consectetur
+                adipisicing elit.
+                Deleniti, ea?
             </p>
 
             <!------------CARDS TOUR------------>
-            <div class="card col-12 w-75 mx-auto mb-3">
-                <div class="card-body">
-                    <h5 class="card-title border-bottom border-2">Los Ángeles</h5>
-                    <div class="d-flex align-items-end">
-                        <h6 class="card-subtitle mb-1 pe-2 border-end border-2">Jul <br>2022</h6>
-                        <p class="card-text ps-2">Viernes 8, 22 horas</p>
+            <div class="row mx-auto mt-5 cardTourSection_container">
+
+                <div class="d-block mx-auto col-12 col-md-6 m-0">
+                    <div class="card mx-auto mb-3 col-sm-10 col-md-12 cardTour_container">
+                        <div class="card-body">
+                            <h5 class="card-title cardTour_title">Los <br> Ángeles</h5>
+                            <div class="d-flex align-items-end">
+                                <h6 class="card-subtitle pe-2 cardTour_subtitle">Jul <br>2022</h6>
+                                <p class="card-text ps-2 cardTour_txt">Viernes 8, 22 horas</p>
+                            </div>
+                        </div>
                     </div>
+                    <button type="button"
+                        class="btn d-block mx-auto col-12 col-sm-10 col-md-12 mb-5 cardBtn cardBtn_tour">Comprar
+                        ticket</button>
                 </div>
-            </div>
-            <button type="button" class="btn btn-outline-secondary w-75 mx-auto mb-5">Secondary</button>
-            <hr class="m-0">
 
-            <div class="card col-12 w-75 mx-auto mt-5">
-                <div class="card-body">
-                    <h5 class="card-title border-bottom border-2">Concepción</h5>
-                    <div class="d-flex align-items-end">
-                        <h6 class="card-subtitle mb-1 pe-2 border-end border-2">Ago<br>2022</h6>
-                        <p class="card-text ps-2">Jueves 4, 22 horas</p>
+                <hr class="m-0 mb-5 d-md-none">
+
+                <div class="d-block mx-auto col-12 col-md-6 m-0">
+                    <div class="card mx-auto mb-3 col-12 col-sm-10 col-md-12 cardTour_container">
+                        <div class="card-body">
+                            <h5 class="card-title cardTour_title">Con<br class="d-sm-none">cepción<br
+                                    class="d-none d-sm-block">&nbsp;</h5>
+                            <div class="d-flex align-items-end">
+                                <h6 class="card-subtitle pe-2 cardTour_subtitle">Ago <br>2022</h6>
+                                <p class="card-text ps-2 cardTour_txt">Jueves 4, 22 horas</p>
+                            </div>
+                        </div>
                     </div>
+                    <button type="button"
+                        class="btn d-block mx-auto col-12 col-sm-10 col-md-12 mb-5 cardBtn cardBtn_tour">Comprar
+                        ticket</button>
                 </div>
-            </div>
-            <button type="button" class="btn btn-outline-secondary w-75 mx-auto mb-5">Secondary</button>
-            <hr class="m-0">
 
-            <div class="card col-12 w-75 mx-auto mt-5">
-                <div class="card-body">
-                    <h5 class="card-title border-bottom border-2">Santiago</h5>
-                    <div class="d-flex align-items-end">
-                        <h6 class="card-subtitle mb-1 pe-2 border-end border-2">Sep <br>2022</h6>
-                        <p class="card-text ps-2">Sábado 3, 22 horas</p>
+                <hr class="m-0 mb-5">
+
+                <div class="d-block mx-auto col-12 col-md-6 m-0">
+                    <div class="card mx-auto mb-3 col-sm-10 col-md-12 cardTour_container">
+                        <div class="card-body">
+                            <h5 class="card-title cardTour_title">San<br class="d-sm-none">tiago<br
+                                    class="d-none d-sm-block">&nbsp;</h5>
+                            <div class="d-flex align-items-end">
+                                <h6 class="card-subtitle pe-2 cardTour_subtitle">Sep <br>2022</h6>
+                                <p class="card-text ps-2 cardTour_txt">Sábado 3, 22 horas</p>
+                            </div>
+                        </div>
                     </div>
+                    <button type="button"
+                        class="btn d-block mx-auto col-12 col-sm-10 col-md-12 mb-5 cardBtn cardBtn_tour">Comprar
+                        ticket</button>
                 </div>
-            </div>
-            <button type="button" class="btn btn-outline-secondary w-75 mx-auto mb-5">Secondary</button>
 
+                <hr class="m-0 mb-5 d-md-none">
 
+                <div class="d-block mx-auto col-12 col-md-6 m-0">
+                    <div class="card mx-auto mb-3 col-sm-10 col-md-12 cardTour_container">
+                        <div class="card-body">
+                            <h5 class="card-title cardTour_title">La<br> Serena</h5>
+                            <div class="d-flex align-items-end">
+                                <h6 class="card-subtitle pe-2 cardTour_subtitle">Sep <br>2022</h6>
+                                <p class="card-text ps-2 cardTour_txt">Sábado 10, 22 horas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button"
+                        class="btn d-block mx-auto col-12 col-sm-10 col-md-12 mb-5 cardBtn cardBtn_tour">Comprar
+                        ticket</button>
+                </div>
+
+                <hr class="d-none d-md-block">
         </section>
     </main>
 
 
     <!------------FOOTER------------>
-    <footer class="container-fluid position-relative bottom-0">
+    <footer class="container-fluid d-flex justify-content-center align-items-centerposition-relative bottom-0">
         <div class="row">
             <div
-                class="mt-2 pb-2 d-flex justify-content-center align-items-center border-2 border-bottom col-md-6 pb-md-0 justify-content-md-start border-bottom-md-0">
+                class="p-2 p-md-0 d-flex justify-content-center align-items-center col-md-6 pb-md-0 justify-content-md-start rrssFoot_container">
                 <a href="" class="ms-2 me-2">Instagram</a>
                 <a href="" class="ms-2 me-2">Facebook</a>
                 <a href="" class="ms-2 me-2">Youtube</a>
             </div>
 
-            <div class="mt-2 d-flex justify-content-center align-items-center col-md-6 justify-content-md-end">
-                <p class="m-0">Escúchanos en:</p>
+            <div class="p-2 p-md-0 d-flex justify-content-around align-items-center col-md-6 justify-content-md-end">
+                <p class="m-0 listenFoot_txt">Escúchanos en:</p>
                 <i class="bi bi-spotify ms-2 me-2 fs-5">Spotify</i>
                 <i class="bi bi-apple ms-2 me-2 fs-5">MUSIC</i>
             </div>
+            <p class="text-center m-0 align-self-end d-block align-self-md-start copyFoot_txt">Código Verónica 2022 -
+                Todos los derechos
+                reservados</p>
         </div>
     </footer>
     <!------------BUNDLE JS BOOTSTRAP------------>

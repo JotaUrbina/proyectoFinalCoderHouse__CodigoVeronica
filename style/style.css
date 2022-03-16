@@ -5,9 +5,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+/********** ESTILOS GENERALES **********/
+
 body {
   min-width: 320px;
+  min-height: 80vh;
 }
+
 body,
 a {
   font-family: "Russo One", sans-serif;
@@ -18,8 +22,35 @@ li {
   list-style: none;
 }
 
+.logo_link {
+  text-decoration: none;
+}
+
+.logo_link:hover {
+  color: #1a1a1a;
+}
+
+.main_title {
+  font-size: 3.2rem;
+}
+
+.main_subtitle {
+  font-size: 1.2rem;
+  color: #999999;
+}
+
+.cardBtn {
+  padding: 8px 0;
+  border: 2px solid #1a1a1a;
+  border-radius: 40px;
+}
+
 .rosado {
   color: #ff45a2;
+}
+
+.card {
+  border: none;
 }
 
 /********** HEADER **********/
@@ -46,9 +77,20 @@ li {
 
 /********** MAIN -- INDEX **********/
 
+.carousel-inner {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 10px auto 10px;
+}
+.carousel-item {
+  width: 280px;
+  height: 280px;
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
 .imgCarrusel_container img {
-  width: 225px;
-  height: 225px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-top: 8px solid #ff45a2;
   border-right: 8px solid #ff45a2;
@@ -90,15 +132,230 @@ li {
   }
 }
 
+.cardDisc_container {
+  background-image: url(../img/bg_caos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.caos_title {
+  font-size: 6rem;
+  line-height: 4rem;
+}
+
+.caos_title_1 {
+  line-height: 2rem;
+}
+
+.caos_title_2 {
+  line-height: 3.2rem;
+}
+
+.punto {
+  display: inline-block;
+  margin-left: 4px;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.cardDiscSong_container {
+  background-color: transparent;
+  color: white;
+}
+
+.cardBtn__disc {
+  width: 100px;
+}
+
+/********** MAIN -- GALERÍA **********/
+.imgGaleria_container {
+  width: 273px;
+  height: 409px;
+}
+
+.imgGaleria_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/********** MAIN -- TOUR **********/
+
+.cardTourSection_container {
+  max-width: 1100px;
+}
+
+.cardTour_container {
+  max-width: 475px;
+  background-color: #ff45a2;
+  border-radius: 25px;
+}
+
+.cardTour_title {
+  font-size: 2.6rem;
+  border-bottom: #1a1a1a solid 2px;
+}
+
+.cardTour_subtitle {
+  font-size: 1.6rem;
+  border-right: #1a1a1a solid 2px;
+}
+
+.cardTour_txt {
+  font-size: 1.2rem;
+}
+
+.cardTour_btn {
+  padding: 8px 0;
+  border: 3px solid #1a1a1a;
+  border-radius: 40px;
+}
+
+.cardBtn_tour {
+  max-width: 475px;
+}
+
+hr {
+  border: 1px dashed #1a1a1a;
+  color: transparent;
+}
+
+/********** MAIN -- TIENDA **********/
+
+.cardImg_container {
+  width: 100%;
+  min-width: 225px;
+  height: 270px;
+}
+
+.cardImg_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardBtn__tienda {
+  width: 180px;
+}
+
+/********** MAIN -- CONTACTO **********/
+
+.bgForm {
+  background-image: url(../img/bg_contacto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form_container {
+  max-width: 560px;
+}
+
+.form_input {
+  padding: 9px;
+
+  background-color: transparent;
+  border: 2px solid #1a1a1a;
+  border-radius: 30px;
+}
+
+.form_input::placeholder {
+  color: #1a1a1a;
+}
+
+.form_btn {
+  width: 52px;
+  height: 52px;
+  font-size: 2rem;
+  color: white;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 50%;
+}
 /********** FOOTER **********/
 
 footer {
+  min-height: 10vh;
   background-color: #f5f5f5;
 }
-i {
+
+footer a {
+  text-decoration: none;
+}
+footer i {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
-
   font-style: normal;
   color: #ff45a2;
+}
+
+.rrssFoot_container {
+  border-bottom: 2px solid rgba(153, 153, 153, 0.4);
+}
+.listenFoot_txt {
+  font-size: 0.8rem;
+}
+.copyFoot_txt {
+  font-size: 0.5rem;
+  color: #999999;
+}
+
+/*^^^^^^^^^^ MEDIA QUERIES -- 576px ^^^^^^^^^*/
+
+/********** CARRUSEL  **********/
+@media screen and (min-width: 576px) {
+  .imgCarrusel_container {
+    width: 450px;
+    height: 450px;
+  }
+
+  /********** GALERÍA **********/
+  .galeria_container {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 359px 50px 329px 80px 359px;
+  }
+
+  .imgGaleria_1 {
+    grid-column: 1 / span 3;
+  }
+  .imgGaleria_2 {
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 4;
+  }
+
+  .imgGaleria_3 {
+    grid-column: 3 / span 3;
+    grid-row-start: 4;
+  }
+}
+
+/*^^^^^^^^^^ MEDIA QUERIES -- 768px ^^^^^^^^^*/
+
+@media screen and (min-width: 768px) {
+  .rrssFoot_container {
+    border-bottom: none;
+  }
+}
+
+/*^^^^^^^^^^ MEDIA QUERIES -- 992px ^^^^^^^^^*/
+
+@media screen and (min-width: 992px) {
+  /********** CARRUSEL  **********/
+  .imgCarrusel_container {
+    width: 580px;
+    height: 580px;
+  }
+  /********** GALERÍA **********/
+  .galeria_container {
+    display: flex;
+  }
+
+  /********** TIENDA  **********/
+  .cardImg_container {
+    height: 300px;
+  }
 }

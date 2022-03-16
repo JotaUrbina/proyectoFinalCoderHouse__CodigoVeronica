@@ -30,7 +30,7 @@
         <div class="row h-100">
             <!------------LOGO------------>
             <div class="col-6 d-flex align-items-center">
-                <a href="../index.html">
+                <a href="../index.html" class="logo_link">
                     <h1 class="ms-2 mb-0 fs-4"><span class="rosado">&lsaquo;</span>código verónica<span span
                             class="rosado">&rsaquo;</span>
                     </h1>
@@ -72,76 +72,88 @@
 
     <!------------MAIN -- TOUR------------>
     <main class="container_fluid">
-        <section class="row w-100 m-0 mt-5 d-flex flex-column justify-content-center align-items-center">
-            <h2 class="fs-1 text-center m-0 p-0"><span class="rosado">&lsaquo;</span>tienda<span
+        <section class="row m-0 mt-5">
+            <h2 class="text-center m-0 p-0 main_title"><span class="rosado">&lsaquo;</span>tienda<span
                     class="rosado">&rsaquo;</span>
             </h2>
-            <p class="text-center col-12 w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <p class="text-center mb-5 main_subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
                 Deleniti, ea?
             </p>
 
             <!------------CARDS TTIENDA------------>
-            <div class="card mb-5 w-50 col-12">
-                <img src="../img/carcasa.jpg" class="card-img-top" alt="...">
+            <div class="card col-sm-7 col-md-7 col-lg-6 mb-5 mx-auto">
+                <div class="mx-auto cardImg_container">
+                    <img src="../img/carcasa.jpg" class="card-img-top" alt="...">
+                </div>
                 <div class="card-body p-0">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between cardShopTxt_container">
                         <p class="card-text">Case iphone 13</p>
                         <p class="card-text">$14.990</p>
                     </div>
-                    <a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+                    <a href="#" class="btn cardBtn cardBtn__tienda">Comprar</a>
                 </div>
             </div>
 
-            <div class="card mb-5 w-50 col-12 d-block">
-                <img src="../img/bolsa.jpg" class="card-img-top" alt="...">
+            <div class="card col-sm-7 col-md-7 col-lg-6 mb-5 mx-auto">
+                <div class="cardImg_container">
+                    <img src="../img/bolsa.jpg" class="card-img-top" alt="...">
+                </div>
                 <div class="card-body p-0">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between cardShopTxt_container">
                         <p class="card-text">Tote bag</p>
                         <p class="card-text">$19.990</p>
                     </div>
-                    <a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+                    <a href="#" class="btn cardBtn cardBtn__tienda">Comprar</a>
                 </div>
             </div>
 
-            <div class="card mb-5 w-50 d-block">
-                <img src="../img/tabla.jpg" class="card-img-top" alt="...">
+            <div class="card col-sm-7 col-md-7 col-lg-6 mb-5 mx-auto">
+                <div class="mx-auto cardImg_container">
+                    <img src="../img/tabla.jpg" class="card-img-top" alt="...">
+                </div>
                 <div class="card-body p-0">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between cardShopTxt_container">
                         <p class="card-text">Skateboard</p>
                         <p class="card-text">$54.990</p>
                     </div>
-                    <a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+                    <a href="#" class="btn cardBtn cardBtn__tienda">Comprar</a>
                 </div>
             </div>
 
-            <div class="card mb-5 w-50 col-12">
-                <img src="../img/carcasa.jpg" class="card-img-top" alt="...">
+            <div class="card col-sm-7 col-md-7 col-lg-6 mb-5 mx-auto">
+                <div class="cardImg_container">
+                    <img src="../img/bolsa.jpg" class="card-img-top" alt="...">
+                </div>
                 <div class="card-body p-0">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between cardShopTxt_container">
                         <p class="card-text">Pin set</p>
                         <p class="card-text">$14.990</p>
                     </div>
-                    <a href="#" class="btn btn-outline-secondary">Go somewhere</a>
+                    <a href="#" class="btn cardBtn cardBtn__tienda">Comprar</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!------------FOOTER------------>
-    <footer class="container-fluid position-relative bottom-0">
+    <footer class="container-fluid d-flex justify-content-center align-items-centerposition-relative bottom-0">
         <div class="row">
             <div
-                class="mt-2 pb-2 d-flex justify-content-center align-items-center border-2 border-bottom col-md-6 pb-md-0 justify-content-md-start border-bottom-md-0">
+                class="p-2 p-md-0 d-flex justify-content-center align-items-center col-md-6 pb-md-0 justify-content-md-start rrssFoot_container">
                 <a href="" class="ms-2 me-2">Instagram</a>
                 <a href="" class="ms-2 me-2">Facebook</a>
                 <a href="" class="ms-2 me-2">Youtube</a>
             </div>
 
-            <div class="mt-2 d-flex justify-content-center align-items-center col-md-6 justify-content-md-end">
-                <p class="m-0">Escúchanos en:</p>
+            <div class="p-2 p-md-0 d-flex justify-content-around align-items-center col-md-6 justify-content-md-end">
+                <p class="m-0 listenFoot_txt">Escúchanos en:</p>
                 <i class="bi bi-spotify ms-2 me-2 fs-5">Spotify</i>
                 <i class="bi bi-apple ms-2 me-2 fs-5">MUSIC</i>
             </div>
+            <p class="text-center m-0 align-self-end d-block align-self-md-start copyFoot_txt">Código Verónica 2022 -
+                Todos los derechos
+                reservados</p>
         </div>
     </footer>
     <!------------BUNDLE JS BOOTSTRAP------------>
