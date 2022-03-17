@@ -10,17 +10,12 @@
 body {
   min-width: 320px;
   min-height: 100vh;
-  max-width: 100vw;
 }
 
 body,
 a {
   font-family: "Russo One", sans-serif;
   color: #1a1a1a;
-}
-
-section {
-  overflow: hidden;
 }
 
 li {
@@ -87,8 +82,8 @@ li {
 /********** MAIN -- INDEX **********/
 
 .carousel-inner {
-  width: 100vw;
   display: grid;
+
   grid-template-columns: 10px auto 10px;
 }
 .carousel-item {
@@ -112,28 +107,23 @@ li {
 .marquee {
   white-space: nowrap;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   height: 30px;
   background-color: #ff45a2;
   transform: rotate(5deg);
-  margin-top: 3rem;
-}
-.marquee__1 {
-  position: relative;
 }
 
 .marquee__2 {
   transform: rotate(-5deg);
-  position: absolute;
 }
 
 .marquee h2 {
-  min-width: 100%;
-  animation: marquee 3s linear infinite alternate-reverse;
+  width: 100%;
+  animation: marquee 3s linear infinite reverse;
 }
 
 .marquee_2 h2 {
-  min-width: 100%;
+  width: 100%;
   animation: marquee 3s linear infinite alternate;
 }
 
