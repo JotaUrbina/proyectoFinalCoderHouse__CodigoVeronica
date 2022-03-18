@@ -107,7 +107,6 @@ li {
 .marquee {
   white-space: nowrap;
   overflow: hidden;
-  width: 100%;
   height: 30px;
   background-color: #ff45a2;
   transform: rotate(5deg);
@@ -118,12 +117,10 @@ li {
 }
 
 .marquee h2 {
-  width: 100%;
   animation: marquee 3s linear infinite reverse;
 }
 
 .marquee_2 h2 {
-  width: 100%;
   animation: marquee 3s linear infinite alternate;
 }
 
@@ -167,6 +164,7 @@ li {
 }
 
 .cardDiscSong_container {
+  max-width: 550px;
   background-color: transparent;
   color: white;
 }
