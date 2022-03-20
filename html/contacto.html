@@ -26,7 +26,7 @@
 
 <body>
     <!------------HEADER------------>
-    <header class="container-fluid position-relative top-0 header_container">
+    <header class="container-fluid position-sticky top-0 header_container">
         <div class="row h-100">
             <!------------LOGO------------>
             <div class="col-6 d-flex align-items-center">
@@ -46,22 +46,29 @@
             <nav class="col-1 d-flex justify-content-end align-items-center">
                 <div class="icon_container d-flex justify-content-center align-items-center position-absolute top-0 end-0"
                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                    <i class="bi bi-three-dots fs-2 menu_icon"></i>
+                    <i class="bi bi-three-dots-vertical fs-2 menu_icon"></i>
                 </div>
+
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
                     aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header d-flex justify-content-end xIcon_container">
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+
+                    <div class="w-100 offcanvas-header d-flex justify-content-end align-items-center xIcon_container icon_container"
+                        data-bs-dismiss="offcanvas" aria-label="Close">
+                        <h6 class="fs-6 pe-2 menuClose_txt">cerrar</h6>
+                        <i class="bi bi-three-dots fs-2 menu_icon"></i>
                     </div>
+
                     <div class="offcanvas-body menuDesplegable_container">
                         <ul class="h-100 m-0 p-0 d-flex flex-column justify-content-center align-items-center">
-                            <LI><a href="./tour.html" class="fs-1"><span>&lsaquo;</span>Tour<span>&rsaquo;</span></a>
-                            </LI>
-                            <LI><a href="./tienda.html"
-                                    class="fs-1"><span>&lsaquo;</span>Tienda<span>&rsaquo;</span></a></LI>
-                            <LI><a href="./contacto.html"
-                                    class="fs-1"><span>&lsaquo;</span>Contacto<span>&rsaquo;</span></a></LI>
+                            <li><a href="./tour.html" class="fs-1"><span
+                                        class="blanco leftCode">&lsaquo;</span>Tour<span
+                                        class="blanco rightCode">&rsaquo;</span></a></li>
+                            <li><a href="./tienda.html" class="fs-1"><span
+                                        class="blanco leftCode">&lsaquo;</span>Tienda<span
+                                        class="blanco rightCode">&rsaquo;</span></a></li>
+                            <li><a href="./contacto.html" class="fs-1"><span
+                                        class="blanco leftCode">&lsaquo;</span>Contacto<span
+                                        class="blanco rightCode">&rsaquo;</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -75,24 +82,28 @@
             <h2 class="text-center my-0 main_title"><span class="rosado">&lsaquo;</span>contacto<span
                     class="rosado">&rsaquo;</span>
             </h2>
-            <p class="text-center main_subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
-                Deleniti, ea?
+            <p class="text-center main_subtitle">Encuéntranos en las redes sociales, llena el formulario o envíanos un
+                mail
             </p>
 
             <!------------FORMULARIO------------>
             <div class="bgForm">
                 <form action="" class="row mx-auto mt-5 g-3 form_container">
-                    <input class="col-6 ps-2 form_input" type="text" id="nombre" name="nombre" placeholder="nombre"
+                    <input class="col-6 ps-4 form_input" type="text" id="nombre" name="nombre" placeholder="nombre"
                         required>
-                    <input class="col-6 ps-2 form_input" type="text" id="apellido" name="apellido"
+                    <input class="col-6 ps-4 form_input" type="text" id="apellido" name="apellido"
                         placeholder="apellido" required>
-                    <input class="ps-2 form_input" type="email" id="email" name="email" placeholder="email" required>
-                    <textarea class="ps-2 mb-3 form_input textarea_input" name="mensaje" id="mensaje" cols="30"
+                    <input class="ps-4 form_input" type="email" id="email" name="email" placeholder="email" required>
+                    <textarea class="ps-4 mb-3 form_input textarea_input" name="mensaje" id="mensaje" cols="30"
                         rows="10" placeholder="mensaje" required></textarea>
                     <button type="submit"
                         class="form_btn mb-5 ms-auto d-flex justify-content-center align-items-center">&rsaquo;</button>
                 </form>
+            </div>
+
+            <div class="row email_container d-flex flex-column justify-content-center">
+                <p class="my-0 text-center main_subtitle">email</p>
+                <h2 class="text-center">contacto@codigoveronica.com</h2>
             </div>
         </section>
     </main>
@@ -101,16 +112,21 @@
     <footer class="container-fluid d-flex justify-content-center align-items-centerposition-relative bottom-0">
         <div class="row">
             <div
-                class="p-md-0 d-flex justify-content-center align-items-center col-md-6 pb-md-0 justify-content-md-start rrssFoot_container">
-                <a href="#" class="mx-2">Instagram</a>
-                <a href="#" class="mx-2">Facebook</a>
-                <a href="#" class="mx-2">Youtube</a>
+                class="py-3 p-md-0 d-flex justify-content-center align-items-center col-md-6 pb-md-0 justify-content-md-start rrssFoot_container">
+                <a href="https://www.instagram.com/codigo.veronica/?hl=es-la" class="mx-2" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/adversisrock" class="mx-2" target="_blank">Facebook</a>
+                <a href="https://www.youtube.com/channel/UC_2WLbjIO5WCANgsPuuYDKQ" class="mx-2"
+                    target="_blank">Youtube</a>
             </div>
 
             <div class="p-md-0 d-flex justify-content-around align-items-center col-md-6 justify-content-md-end">
                 <p class="my-0 listenFoot_txt">Escúchanos en:</p>
-                <i class="bi bi-spotify mx-2 fs-5">Spotify</i>
-                <i class="bi bi-apple mx-2 fs-5">MUSIC</i>
+                <a href="https://open.spotify.com/artist/7HV0vLy0KmbbaZgwZ2vmis?si=URTirPgrTv2OlYW3Z39Ouw">
+                    <i class="bi bi-spotify mx-2 fs-5">Spotify</i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-apple mx-2 fs-5">MUSIC</i>
+                </a>
             </div>
             <p class="my-0 py-1 text-center align-self-end d-block align-self-md-start copyFoot_txt">Código Verónica
                 2022
