@@ -402,7 +402,7 @@ footer .copyFoot_txt {
 
 /*^^^^^^^^^^ MEDIA QUERIES -- 768px ^^^^^^^^^*/
 @media screen and (min-width: 768px) {
-  .rrssFoot_container {
+  footer .rrssFoot_container {
     border-bottom: none;
   }
 }
