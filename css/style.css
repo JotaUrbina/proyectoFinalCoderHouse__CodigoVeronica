@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/********** ESTILOS UNIVERSALES **********/
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +6,6 @@
           box-sizing: border-box;
 }
 
-/********** ESTILOS GENERALES **********/
 body {
   min-width: 320px;
   min-height: 100vh;
@@ -40,12 +38,6 @@ body a:hover {
   color: #999999;
 }
 
-.cardBtn {
-  padding: 8px 0;
-  border: 2px solid #1a1a1a;
-  border-radius: 40px;
-}
-
 .rosado {
   color: #ff45a2;
 }
@@ -54,7 +46,6 @@ body a:hover {
   border: none;
 }
 
-/********** HEADER **********/
 .header_container {
   height: 10vh;
   background-color: #f5f5f5;
@@ -69,18 +60,17 @@ body a:hover {
 }
 
 .header_container .icon_container .menu_icon {
-  color: white;
+  color: #ffffff;
 }
 
 .header_container .icon_container .menuClose_txt {
-  color: white;
+  color: #ffffff;
 }
 
 .header_container .menuDesplegable_container {
   background-color: #ff45a2;
 }
 
-/********** MAIN -- INDEX **********/
 .carousel-inner {
   display: -ms-grid;
   display: grid;
@@ -109,7 +99,6 @@ body a:hover {
           box-shadow: #1a1a1a 14px 0;
 }
 
-/********** MAIN -- NUEVO LANZAMIENTO **********/
 .marquee {
   white-space: nowrap;
   overflow: hidden;
@@ -168,34 +157,28 @@ body a:hover {
   line-height: 4rem;
 }
 
-.caos_title_1 {
-  line-height: 2rem;
-}
-
-.caos_title_2 {
-  line-height: 3.2rem;
-}
-
 .punto {
   display: inline-block;
   margin-left: 4px;
   width: 32px;
   height: 32px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 50%;
 }
 
-.cardDiscSong_container {
-  max-width: 500px;
+.discCard {
+  max-width: 450px;
   background-color: transparent;
-  color: white;
+  color: #ffffff;
 }
 
-.cardBtn__disc {
+.discCard-btn {
   width: 100px;
+  padding: 8px 0;
+  border: 2px solid #1a1a1a;
+  border-radius: 40px;
 }
 
-/********** MAIN -- GALERÍA **********/
 .imgGaleria_container {
   width: 273px;
   height: 409px;
@@ -208,32 +191,35 @@ body a:hover {
      object-fit: cover;
 }
 
-/********** MAIN -- TOUR **********/
 .cardTourSection_container {
   max-width: 1100px;
 }
 
-.cardTourSection_container .cardTour {
+.tourCard {
   max-width: 475px;
   background-color: #ff45a2;
   border-radius: 25px;
 }
 
-.cardTourSection_container .cardTour_title {
+.tourCard-title {
   font-size: 2.6rem;
   border-bottom: #1a1a1a solid 2px;
 }
 
-.cardTourSection_container .cardTour_subtitle {
+.tourCard-subtitle {
   font-size: 1.6rem;
   border-right: #1a1a1a solid 2px;
 }
 
-.cardTourSection_container .cardTour_txt {
+.tourCard-txt {
   font-size: 1.2rem;
 }
 
-.cardBtn_tour {
+.tourCard-btn {
+  width: 100%;
+  padding: 8px 0;
+  border: 2px solid #1a1a1a;
+  border-radius: 40px;
   max-width: 475px;
 }
 
@@ -242,64 +228,65 @@ hr {
   color: transparent;
 }
 
-/********** MAIN -- TIENDA **********/
-.cardImg_container {
+.shopCard-imgContainer {
   width: 100%;
   min-width: 225px;
   height: 270px;
 }
 
-.cardImg_container img {
+.shopCard-imgContainer img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.cardImg_container .cardBtn__tienda {
-  width: 180px;
+.shopCard-btn {
+  width: 50%;
+  padding: 8px 0;
+  border: 2px solid #1a1a1a;
+  border-radius: 40px;
 }
 
-/********** MAIN -- CONTACTO **********/
-.bgForm {
+.form-bg {
   background-image: url(../img/bg_contacto.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.bgForm .form_container {
+.form-container {
   max-width: 560px;
 }
 
-.bgForm .form_container .form_input {
+.form-input {
   padding: 9px;
   background-color: transparent;
   border: 2px solid #1a1a1a;
   border-radius: 30px;
 }
 
-.bgForm .form_container .form_input::-webkit-input-placeholder {
+.form-input::-webkit-input-placeholder {
   color: #1a1a1a;
 }
 
-.bgForm .form_container .form_input:-ms-input-placeholder {
+.form-input:-ms-input-placeholder {
   color: #1a1a1a;
 }
 
-.bgForm .form_container .form_input::-ms-input-placeholder {
+.form-input::-ms-input-placeholder {
   color: #1a1a1a;
 }
 
-.bgForm .form_container .form_input::placeholder {
+.form-input::placeholder {
   color: #1a1a1a;
 }
 
-.bgForm .form_container .form_btn {
+.form-btn {
   width: 52px;
   height: 52px;
   font-size: 2rem;
-  color: white;
+  color: #ffffff;
   background-color: #1a1a1a;
   border: none;
   border-radius: 50%;
@@ -309,33 +296,41 @@ hr {
   height: 30vh;
 }
 
-/********** FOOTER **********/
-footer {
+.footer {
   min-height: 10vh;
   background-color: #f5f5f5;
 }
 
-footer a {
+.footer-link {
   text-decoration: none;
 }
 
-footer a i {
+.footer-link__icon {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   font-style: normal;
   color: #ff45a2;
 }
 
-footer .rrssFoot_container {
+.footer-listenTxt {
+  font-size: 0.8rem;
+}
+
+.footer-txt {
+  font-size: 0.5rem;
+  color: #999999;
+}
+
+.rrssFoot_container {
   border-bottom: 2px solid rgba(153, 153, 153, 0.4);
   font-size: 0.8rem;
 }
 
-footer .rrssFoot_container a {
+.rrssFoot_container a {
   overflow: hidden;
 }
 
-footer .rrssFoot_container a::after {
+.rrssFoot_container a::after {
   display: block;
   width: 100%;
   height: 2px;
@@ -345,29 +340,18 @@ footer .rrssFoot_container a::after {
           transform: translate(-105%, -5px);
 }
 
-footer .rrssFoot_container a:hover::after {
+.rrssFoot_container a:hover::after {
   -webkit-transform: translate(0, -5px);
           transform: translate(0, -5px);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-footer .listenFoot_txt {
-  font-size: 0.8rem;
-}
-
-footer .copyFoot_txt {
-  font-size: 0.5rem;
-  color: #999999;
-}
-
-/*^^^^^^^^^^ MEDIA QUERIES -- 576px ^^^^^^^^^*/
-/*^^^^^^^^^^ MEDIA QUERIES -- 576px ^^^^^^^^^*/
 /********** CARRUSEL  **********/
 @media screen and (min-width: 576px) {
-  .imgCarrusel_container {
-    width: 450px;
-    height: 450px;
+  .carousel-item {
+    width: 580px;
+    height: 580px;
   }
   /********** GALERÍA **********/
   .galeria_container {
@@ -400,17 +384,15 @@ footer .copyFoot_txt {
   }
 }
 
-/*^^^^^^^^^^ MEDIA QUERIES -- 768px ^^^^^^^^^*/
 @media screen and (min-width: 768px) {
-  footer .rrssFoot_container {
+  .rrssFoot_container {
     border-bottom: none;
   }
 }
 
-/*^^^^^^^^^^ MEDIA QUERIES -- 992px ^^^^^^^^^*/
 @media screen and (min-width: 992px) {
   /********** CARRUSEL  **********/
-  .imgCarrusel_container {
+  .carousel-item {
     width: 580px;
     height: 580px;
   }
@@ -426,10 +408,9 @@ footer .copyFoot_txt {
   }
 }
 
-/*^^^^^^^^^^ ANIMACIONES ^^^^^^^^^*/
 /**--------- NAV ---------**/
 .menuDesplegable_container .blanco {
-  color: white;
+  color: #ffffff;
   opacity: 0;
 }
 
@@ -487,7 +468,7 @@ footer .copyFoot_txt {
 }
 
 .btn:hover {
-  color: whitesmoke;
+  color: #ffffff;
   cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
