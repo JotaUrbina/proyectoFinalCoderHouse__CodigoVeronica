@@ -179,6 +179,15 @@ body a:hover {
   border-radius: 40px;
 }
 
+.discCard-audio {
+  visibility: hidden;
+  position: absolute;
+}
+
+.hide {
+  display: none;
+}
+
 .imgGaleria_container {
   width: 273px;
   height: 409px;

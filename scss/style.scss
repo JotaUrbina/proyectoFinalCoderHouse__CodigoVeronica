@@ -178,6 +178,14 @@ body {
   &-btn {
     @include btn(100px);
   }
+  &-audio {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.hide {
+  display: none;
 }
 
 ////////////////////////////////////////
