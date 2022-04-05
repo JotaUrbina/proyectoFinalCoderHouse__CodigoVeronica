@@ -1,3 +1,14 @@
+@media screen and (min-width: 470px) {
+  .modal-card {
+    &-imgContainer {
+      height: 65%;
+    }
+    &-body {
+      height: 35%;
+    }
+  }
+}
+
 ////////////////////////////////////////
 // 1- MEDIA QUERIES -- 576px
 ////////////////////////////////////////
@@ -6,8 +17,11 @@
 @media screen and (min-width: 576px) {
   .carousel {
     &-item {
-      width: 580px;
-      height: 580px;
+      width: 490px;
+      height: 490px;
+    }
+    &-plusIcon {
+      font-size: 2rem;
     }
   }
 
@@ -36,7 +50,36 @@
 }
 
 ////////////////////////////////////////
-// 2- MEDIA QUERIES -- 768px
+// 2- MEDIA QUERIES -- 650px
+////////////////////////////////////////
+
+@media screen and (min-width: 710px) {
+  .modal {
+    &-dialog,
+    &-content {
+      width: 70vw;
+      height: 70vh;
+    }
+    &-card {
+      flex-direction: row;
+      &-imgContainer {
+        width: 50%;
+        height: 100%;
+      }
+      &-body {
+        padding-top: 2rem;
+        width: 50%;
+        height: 100%;
+      }
+    }
+    &-btn-close {
+      color: #1a1a1a;
+    }
+  }
+}
+
+////////////////////////////////////////
+// 3- MEDIA QUERIES -- 768px
 ////////////////////////////////////////
 
 @media screen and (min-width: 768px) {
@@ -46,7 +89,7 @@
 }
 
 ////////////////////////////////////////
-// 3- MEDIA QUERIES -- 992px
+// 4- MEDIA QUERIES -- 992px
 ////////////////////////////////////////
 
 @media screen and (min-width: 992px) {

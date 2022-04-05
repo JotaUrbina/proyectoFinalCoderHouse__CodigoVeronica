@@ -79,8 +79,8 @@ body a:hover {
 }
 
 .carousel-item {
-  width: 280px;
-  height: 280px;
+  width: 250px;
+  height: 250px;
   -ms-grid-column: 2;
       grid-column-start: 2;
   -ms-grid-row: 1;
@@ -97,6 +97,160 @@ body a:hover {
   border-bottom: 8px solid #ff45a2;
   -webkit-box-shadow: #1a1a1a 14px 0;
           box-shadow: #1a1a1a 14px 0;
+}
+
+.carousel-plusIcon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: calc(50% - 36px);
+  padding: 0 8px;
+  font-size: 3rem;
+  color: #ff45a2;
+  opacity: 0.4;
+}
+
+.carousel-control-prev:hover, .carousel-control-prev:focus, .carousel-control-next:hover, .carousel-control-next:focus {
+  color: #ff45a2;
+  opacity: 0.9;
+}
+
+@-webkit-keyframes imgMov {
+  0% {
+    -webkit-transform: scale(1.006);
+            transform: scale(1.006);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1.006);
+            transform: scale(1.006);
+  }
+}
+
+@keyframes imgMov {
+  0% {
+    -webkit-transform: scale(1.006);
+            transform: scale(1.006);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1.006);
+            transform: scale(1.006);
+  }
+}
+
+.home {
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  margin-top: 12px;
+}
+
+.home-imgContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home-img__4 {
+  -o-object-position: -60px;
+     object-position: -60px;
+}
+
+.home-img__1:hover, .home-img__2:hover, .home-img__3:hover, .home-img__4:hover {
+  cursor: pointer;
+  -webkit-animation: imgMov ease-in-out 4s infinite;
+          animation: imgMov ease-in-out 4s infinite;
+}
+
+.home-img__1:hover ~ .home-plusIcon, .home-img__2:hover ~ .home-plusIcon, .home-img__3:hover ~ .home-plusIcon, .home-img__4:hover ~ .home-plusIcon {
+  opacity: 1;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  -webkit-animation: imgMov ease-in-out 4s infinite;
+          animation: imgMov ease-in-out 4s infinite;
+}
+
+.home-plusIcon {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.home-plusIcon:hover {
+  opacity: 1;
+  -webkit-animation: imgMov ease-in-out 4s infinite;
+          animation: imgMov ease-in-out 4s infinite;
+}
+
+.modal-dialog, .modal-content {
+  width: 90vw;
+  max-width: 900px;
+  min-width: 288px;
+  height: 85vh;
+}
+
+.modal-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-card-imgContainer {
+  width: 100%;
+  height: 50%;
+}
+
+.modal-card-body {
+  width: 100%;
+  height: 50%;
+}
+
+.modal-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal-img__4 {
+  -o-object-position: -60px;
+     object-position: -60px;
+}
+
+.modal-btn-close {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  padding: 4px;
+  color: #ffffff;
 }
 
 .marquee {
@@ -144,8 +298,24 @@ body a:hover {
   }
 }
 
+.linkSpoti {
+  right: -12px;
+  height: 70px;
+  width: 70px;
+  background-color: #1a1a1a;
+}
+
+.linkSpoti-icon {
+  font-size: 2.8rem;
+  color: #ffffff;
+}
+
+.linkSpoti-icon:hover {
+  color: #ffffff;
+}
+
 .cardDisc_container {
-  background-image: url(../img/bg_caos.jpg);
+  background-image: url(../assets/img/bg/bg_caos.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -173,10 +343,44 @@ body a:hover {
 }
 
 .discCard-btn {
+  position: relative;
   width: 100px;
   padding: 8px 0;
   border: 2px solid #1a1a1a;
   border-radius: 40px;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.discCard-btn::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  content: "";
+  background: none;
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.discCard-btn:hover {
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.discCard-btn:hover::after {
+  background: #1a1a1a;
+  -webkit-transform: scale(475);
+          transform: scale(475);
 }
 
 .discCard-audio {
@@ -225,11 +429,45 @@ body a:hover {
 }
 
 .tourCard-btn {
+  position: relative;
   width: 100%;
   padding: 8px 0;
   border: 2px solid #1a1a1a;
   border-radius: 40px;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   max-width: 475px;
+}
+
+.tourCard-btn::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  content: "";
+  background: none;
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.tourCard-btn:hover {
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.tourCard-btn:hover::after {
+  background: #1a1a1a;
+  -webkit-transform: scale(475);
+          transform: scale(475);
 }
 
 hr {
@@ -241,6 +479,9 @@ hr {
   width: 100%;
   min-width: 225px;
   height: 270px;
+  opacity: 0;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
 }
 
 .shopCard-imgContainer img {
@@ -250,15 +491,131 @@ hr {
      object-fit: cover;
 }
 
+.shopCard-pinSet {
+  opacity: 1;
+}
+
 .shopCard-btn {
+  position: relative;
   width: 50%;
   padding: 8px 0;
   border: 2px solid #1a1a1a;
   border-radius: 40px;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.shopCard-btn::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  content: "";
+  background: none;
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.shopCard-btn:hover {
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.shopCard-btn:hover::after {
+  background: #1a1a1a;
+  -webkit-transform: scale(475);
+          transform: scale(475);
+}
+
+.label {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.label-pink {
+  background-color: #ff45a2;
+  position: relative;
+  top: 13px;
+}
+
+.label-black {
+  background-color: #1a1a1a;
+  position: relative;
+  top: -7px;
+  right: -30px;
+}
+
+.shop2 {
+  padding: 0px 12px;
+}
+
+#carcasaPink:checked ~ .shop1 {
+  opacity: 1;
+}
+
+#carcasaPink:checked ~ .label-pink {
+  outline: auto 1px #ff45a2;
+  outline-offset: 3px;
+}
+
+#carcasaBlack:checked ~ .shop2 {
+  opacity: 1;
+}
+
+#carcasaBlack:checked ~ .label-black {
+  outline: auto 1px #1a1a1a;
+  outline-offset: 3px;
+}
+
+#bolsoPink:checked ~ .shop1 {
+  opacity: 1;
+}
+
+#bolsoPink:checked ~ .label-pink {
+  outline: auto 1px #ff45a2;
+  outline-offset: 3px;
+}
+
+#bolsoBlack:checked ~ .shop2 {
+  opacity: 1;
+}
+
+#bolsoBlack:checked ~ .label-black {
+  outline: auto 1px #1a1a1a;
+  outline-offset: 3px;
+}
+
+#skatePink:checked ~ .shop1 {
+  opacity: 1;
+}
+
+#skatePink:checked ~ .label-pink {
+  outline: auto 1px #ff45a2;
+  outline-offset: 3px;
+}
+
+#skateBlack:checked ~ .shop2 {
+  opacity: 1;
+}
+
+#skateBlack:checked ~ .label-black {
+  outline: auto 1px #1a1a1a;
+  outline-offset: 3px;
 }
 
 .form-bg {
-  background-image: url(../img/bg_contacto.jpg);
+  background-image: url(../assets/img/bg/bg_contacto.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -356,11 +713,23 @@ hr {
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (min-width: 470px) {
+  .modal-card-imgContainer {
+    height: 65%;
+  }
+  .modal-card-body {
+    height: 35%;
+  }
+}
+
 /********** CARRUSEL  **********/
 @media screen and (min-width: 576px) {
   .carousel-item {
-    width: 580px;
-    height: 580px;
+    width: 490px;
+    height: 490px;
+  }
+  .carousel-plusIcon {
+    font-size: 2rem;
   }
   /********** GALERÍA **********/
   .galeria_container {
@@ -390,6 +759,31 @@ hr {
     grid-column: 3 / span 3;
     -ms-grid-row: 4;
         grid-row-start: 4;
+  }
+}
+
+@media screen and (min-width: 710px) {
+  .modal-dialog, .modal-content {
+    width: 70vw;
+    height: 70vh;
+  }
+  .modal-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .modal-card-imgContainer {
+    width: 50%;
+    height: 100%;
+  }
+  .modal-card-body {
+    padding-top: 2rem;
+    width: 50%;
+    height: 100%;
+  }
+  .modal-btn-close {
+    color: #1a1a1a;
   }
 }
 
@@ -449,43 +843,5 @@ hr {
 .menuDesplegable_container a:hover .rightCode {
   -webkit-transform: translate(0);
           transform: translate(0);
-}
-
-/**--------- BOTONES ---------**/
-.btn {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.btn::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1px;
-  height: 1px;
-  content: "";
-  background: none;
-  border-radius: 50%;
-  z-index: -1;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.btn:hover {
-  color: #ffffff;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.btn:hover::after {
-  background: #1a1a1a;
-  -webkit-transform: scale(475);
-          transform: scale(475);
 }
 /*# sourceMappingURL=style.css.map */

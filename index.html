@@ -40,9 +40,8 @@
             <!------------LOGO------------>
             <div class="col-6 d-flex align-items-center">
                 <a href="./index.html" class="logo_link">
-                    <h1 class="ms-2 mb-0 fs-4"><span class="rosado">&lsaquo;</span>código verónica<span span
-                            class="rosado">&rsaquo;</span>
-                    </h1>
+                    <h1 class="ms-2 mb-0 fs-4"><span class="rosado">&lsaquo;</span>código<span
+                            class="rosado">&rsaquo;</span> verónica</h1>
                 </a>
             </div>
             <!------------MENU------------>
@@ -89,22 +88,197 @@
 
         <!------------CARRUSEL------------>
         <section class="row">
-            <div id="carouselExampleInterval" class="carousel slide carousel-fade mt-5" data-bs-ride="carousel">
+            <div id="carouselExampleControls" class="carousel slide carousel-fade mt-5 d-md-none"
+                data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active imgCarrusel_container mx-auto" data-bs-interval="3000">
-                        <img src="./img/guitarrista.jpg" class="rounded-circle" alt="Javier Urbina - Guitarrista">
-                    </div>
+                    <figure class="carousel-item active imgCarrusel_container mx-auto position-relative"
+                        data-bs-interval="3000">
+                        <img src="./assets/img/carrusel/guitarrista.jpg" class="rounded-circle"
+                            alt="Javier Urbina - Guitarrista" data-bs-toggle="modal" data-bs-target="#modal_1">
+                        <i class="bi bi-plus-circle carousel-plusIcon" data-bs-toggle="modal"
+                            data-bs-target="#modal_1"></i>
+                    </figure>
 
-                    <div class="carousel-item imgCarrusel_container mx-auto"" data-bs-interval=" 3000">
-                        <img src="./img/bajista.jpg" class="rounded-circle" alt="Hass Nachar - Bajista">
-                    </div>
+                    <figure class="carousel-item imgCarrusel_container mx-auto position-relative"
+                        data-bs-interval="3000">
+                        <img src="./assets/img/carrusel/bajista.jpg" class="rounded-circle" alt="Hass Nachar - Bajista"
+                            data-bs-toggle="modal" data-bs-target="#modal_2">
+                        <i class="bi bi-plus-circle carousel-plusIcon" data-bs-toggle="modal"
+                            data-bs-target="#modal_2"></i>
+                    </figure>
 
-                    <div class="carousel-item imgCarrusel_container mx-auto"" data-bs-interval=" 3000">
-                        <img src="./img/baterista.jpg" class="rounded-circle" alt="Mati Reyes - Baterista">
-                    </div>
+                    <figure class="carousel-item imgCarrusel_container mx-auto position-relative"
+                        data-bs-interval="3000">
+                        <img src="./assets/img/carrusel/baterista.jpg" class="rounded-circle"
+                            alt="Mati Reyes - Baterista" data-bs-toggle="modal" data-bs-target="#modal_3">
+                        <i class="bi bi-plus-circle carousel-plusIcon" data-bs-toggle="modal"
+                            data-bs-target="#modal_3"></i>
+                    </figure>
 
-                    <div class="carousel-item imgCarrusel_container mx-auto"" data-bs-interval=" 3000">
-                        <img src="./img/vocalista.jpg" class="rounded-circle" alt="Jorge Salazar - Vocalista">
+                    <figure class="carousel-item imgCarrusel_container mx-auto position-relative"
+                        data-bs-interval="3000">
+                        <img src="./assets/img/carrusel/vocalista.jpg" class="rounded-circle"
+                            alt="Jorge Salazar - Vocalista" data-bs-toggle="modal" data-bs-target="#modal_4">
+                        <i class="bi bi-plus-circle carousel-plusIcon" data-bs-toggle="modal"
+                            data-bs-target="#modal_4"></i>
+                    </figure>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span aria-hidden="true">&lsaquo;</span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span aria-hidden="true">&rsaquo;</span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!------------FOTOS HOME------------>
+            <div class="home d-none d-md-grid">
+                <figure class="home-imgContainer">
+                    <img src="./assets/img/carrusel/guitarrista.jpg" alt="Javier Urbina - Guitarrista"
+                        class="home-img home-img__1" data-bs-toggle="modal" data-bs-target="#modal_1">
+                    <i class="bi bi-plus-circle home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_1"></i>
+                </figure>
+                <figure class="home-imgContainer">
+                    <img src="./assets/img/carrusel/bajista.jpg" alt="Hass Nachar - Bajista"
+                        class="home-img home-img__2" data-bs-toggle="modal" data-bs-target="#modal_2">
+                    <i class="bi bi-plus-circle home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_2"></i>
+                </figure>
+                <figure class="home-imgContainer">
+                    <img src="./assets/img/carrusel/baterista.jpg" alt="Mati Reyes - Baterista"
+                        class="home-img home-img__3" data-bs-toggle="modal" data-bs-target="#modal_3">
+                    <i class="bi bi-plus-circle home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_3"></i>
+                </figure class="home-imgContainer">
+                <figure class="home-imgContainer">
+                    <img src="./assets/img/carrusel/vocalista.jpg" alt="Jorge Salazar - Vocalista"
+                        class="home-img home-img__4" data-bs-toggle="modal" data-bs-target="#modal_4">
+                    <i class="bi bi-plus-circle home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_4"></i>
+                </figure>
+            </div>
+            <!------------MODAL------------>
+            <div class="modal fade" id="modal_1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered mx-auto">
+                    <div class="modal-content">
+
+                        <div class="card modal-card">
+                            <i class="bi bi-x-lg modal-btn-close" type="button" data-bs-dismiss="modal"
+                                aria-label="Close"></i>
+                            <div class="modal-card-imgContainer">
+                                <img src="./assets/img/carrusel/guitarrista.jpg" class="card-img-top modal-img"
+                                    alt="...">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between modal-card-body">
+                                <div>
+                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>javier<span
+                                            class="rosado">&rsaquo;</span> urbina</h5>
+                                    <h6>guitarrista</h6>
+                                    <p class="card-text">inició de pequeño tocando en diferentes bandas de punk,
+                                        harcore, grunge y metal. con el tiempo dejó de tocar pero luego de reencontrarse
+                                        con viejos amigos su amor por la música renació y se unió a la banda</p>
+                                </div>
+                                <div>
+                                    <a href="https://www.instagram.com/_elkako/" class="card-link">@_elKako</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modal_2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered mx-auto">
+                    <div class="modal-content">
+                        <div class="card modal-card">
+                            <i class="bi bi-x-lg modal-btn-close" type="button" data-bs-dismiss="modal"
+                                aria-label="Close"></i>
+                            <div class="modal-card-imgContainer">
+                                <img src="./assets/img/carrusel/bajista.jpg" class="card-img-top modal-img" alt="...">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between modal-card-body">
+                                <div>
+                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>hass<span
+                                            class="rosado">&rsaquo;</span> nachar</h5>
+                                    <h6>bajista</h6>
+                                    <p class="card-text">uno de los mejores exponentes de la IX región y sesionista de
+                                        importantes artistas nacioneles, decidió darle un giro a su carrera musical para
+                                        rockear con amigos</p>
+                                </div>
+                                <div>
+                                    <a href="https://www.instagram.com/hass.nach/“" class="card-link">@hass.nach</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modal_3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered mx-auto">
+                    <div class="modal-content">
+                        <div class="card modal-card">
+                            <i class="bi bi-x-lg modal-btn-close" type="button" data-bs-dismiss="modal"
+                                aria-label="Close"></i>
+                            <div class="modal-card-imgContainer">
+                                <img src="./assets/img/carrusel/baterista.jpg" class="card-img-top modal-img" alt="...">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between modal-card-body">
+                                <div>
+                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>mati<span
+                                            class="rosado">&rsaquo;</span> reyes</h5>
+                                    <h6>baterista</h6>
+                                    <p class="card-text">músico y productor de grandes artistas nacionales, decidió
+                                        dividir su tiempo para jugárselas por un proyecto propio y hacer lo quemás ama
+                                        junto a grandes amigos</p>
+                                </div>
+                                <div>
+                                    <a href="https://www.instagram.com/matireyesc/" class="card-link">@matireyesc</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modal_4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered mx-auto">
+                    <div class="modal-content">
+                        <div class="card modal-card">
+                            <i class="bi bi-x-lg modal-btn-close" type="button" data-bs-dismiss="modal"
+                                aria-label="Close"></i>
+                            <div class="modal-card-imgContainer">
+                                <img src="./assets/img/carrusel/vocalista.jpg" class="card-img-top modal-img" alt="...">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between modal-card-body">
+                                <div>
+                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>jorge<span
+                                            class="rosado">&rsaquo;</span> salazar</h5>
+                                    <h6>vocalista</h6>
+                                    <p class="card-text">dio sus primeros pasos durante su
+                                        adolecencia en escena del hardcore. luego de altos y bajos decide
+                                        emprender un proyecto en solitario,la que luego
+                                        evolucionaría a código verónica.</p>
+                                </div>
+                                <div>
+                                    <a href="https://www.instagram.com/salazarjrg/" class="card-link">@salazarjrg</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------------BIO------------>
+            <div class="mt-5">
+                <p class="my-0 text-center caos_subtitle_1">somos</p>
+                <h2 class="text-center main_title"><span class="rosado">&lsaquo;</span>código<span
+                        class="rosado">&rsaquo;</span> verónica
+                </h2>
+                <p class="text-center w-md-25 mx-auto main_subtitle">una banda de pop punk rock con fuertes influencias
+                    de bandas de principios de los 2k, pero con un sonido e identidad propia del 2022
+                </p>
+            </div>
         </section>
 
         <!------------CINTAS ANIMADAS------------>
@@ -134,7 +308,13 @@
         </section>
 
         <!------------NUEVO LANZAMIENTO------------>
-        <section class="row mt-5 g-0 ">
+        <section class="row mt-5 g-0 position-relative">
+            <!------------LINK SPOTIFY------------>
+            <a href="https://open.spotify.com/artist/7HV0vLy0KmbbaZgwZ2vmis?si=URTirPgrTv2OlYW3Z39Ouw"
+                class="position-absolute top-0 d-flex justify-content-center align-items-center linkSpoti"
+                target="_blank">
+                <i class="bi bi-spotify linkSpoti-icon"></i>
+            </a>
             <!------------DISCO------------>
             <div>
                 <!------------CARDS CANCIONES------------>
@@ -146,22 +326,21 @@
                         <p class="caos_subtitle_2">y cosas de siempre</p>
                     </div>
 
-
                     <div class="card-body d-flex justify-content-between align-items-center discCard">
                         <h5 class="card-title m-0 cardDiscSong_title discCard-title">18</h5>
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_18"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
                         <audio controls id="audio_18" class="discCard-audio">
-                            <source src="./mp3/Singular.mp3">
+                            <source src="./assets/mp3/clip18.mp3">
                         </audio>
                     </div>
 
-                    <div class="card-body d-flex justify-content-between align-items-center discCard">
+                    <div class=" card-body d-flex justify-content-between align-items-center discCard">
                         <h5 class="card-title m-0 cardDiscSong_title discCard-title">otra vez</h5>
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_otraVez"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
                         <audio controls id="audio_otraVez" class="discCard-audio">
-                            <source src="./mp3/Singular.mp3">
+                            <source src="./assets/mp3/clipOtraVez.mp3">
                         </audio>
                     </div>
 
@@ -170,7 +349,7 @@
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_derrumbar"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
                         <audio controls id="audio_derrumbar" class="discCard-audio">
-                            <source src="./mp3/Singular.mp3">
+                            <source src="./assets/mp3/clipSeVaaDerrumbar.mp3">
                         </audio>
                     </div>
 
@@ -179,7 +358,7 @@
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_estarBien"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
                         <audio controls id="audio_estarBien" class="discCard-audio">
-                            <source src="./mp3/Singular.mp3">
+                            <source src="./assets/mp3/clipTodoVaaEstarBien.mp3">
                         </audio>
                     </div>
 
@@ -188,7 +367,7 @@
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_latidos"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
                         <audio controls id="audio_latidos" class="discCard-audio">
-                            <source src="./mp3/Singular.mp3">
+                            <source src="./assets/mp3/clipMisLatidos.mp3">
                         </audio>
                     </div>
 
@@ -197,7 +376,7 @@
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_pena"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
                         <audio controls id="audio_pena" class="discCard-audio">
-                            <source src="./mp3/Singular.mp3">
+                            <source src="./assets/mp3/clipValeLaPena.mp3">
                         </audio>
                     </div>
                 </div>
@@ -209,18 +388,23 @@
             <h2 class="my-0 text-center main_title"><span class="rosado">&lsaquo;</span>galería<span
                     class="rosado">&rsaquo;</span>
             </h2>
-            <p class="text-center main_subtitle">Lollapalooza 2019, Chile</p>
+            <p class="text-center main_subtitle">revive las postales de nuestro show debut para el lanzamiento de
+                nuestro primer ep <span class="rosado">&lsaquo;</span>nunca es tarde<span class="rosado">&rsaquo;</span>
+            </p>
 
             <div class="col-12 mt-5 galeria_container">
-                <div class="mx-auto mb-1 imgGaleria_container imgGaleria_1" data-aos="flip-right">
-                    <img src=" ./img/bajista.jpg" alt="Código Verónica en Lollapalooza 2019" class="img-fluid">
-                </div>
-                <div class="mx-auto mb-1 imgGaleria_container imgGaleria_2" data-aos="flip-left">
-                    <img src="./img/img_1.jpg" alt="Código Verónica en Lollapalooza 2019" class="img-fluid">
-                </div>
-                <div class="mx-auto imgGaleria_container imgGaleria_3" data-aos="flip-right">
-                    <img src="./img/img_2.jpg" alt="Código Verónica en Lollapalooza 2019" class="img-fluid">
-                </div>
+                <figure class="mx-auto mb-1 imgGaleria_container imgGaleria_1" data-aos="flip-right">
+                    <img src="./assets/img/carrusel/bajista.jpg"
+                        alt="Código Verónica - Show lanzamiento EP Nunca es tarde" class="img-fluid">
+                </figure>
+                <figure class="mx-auto mb-1 imgGaleria_container imgGaleria_2" data-aos="flip-left">
+                    <img src="./assets/img/galeria/img_1.jpg" alt="Código Verónica - Show lanzamiento EP Nunca es tarde"
+                        class="img-fluid">
+                </figure>
+                <figure class="mx-auto imgGaleria_container imgGaleria_3" data-aos="flip-right">
+                    <img src="./assets/img/galeria/img_2.jpg" alt="Código Verónica - Show lanzamiento EP Nunca es tarde"
+                        class="img-fluid">
+                </figure>
             </div>
         </section>
     </main>

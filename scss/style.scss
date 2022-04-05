@@ -7,15 +7,66 @@ $colorParrafo: #999999;
 $colorResaltado: #ffffff;
 $colorBg: #f5f5f5;
 
-@mixin btn($width) {
+////////////////////////////////////////
+// 2- MIXINS
+////////////////////////////////////////
+
+@mixin btn($width, $transition) {
+  position: relative;
   width: $width;
   padding: 8px 0;
   border: 2px solid $colorPrimario;
   border-radius: 40px;
+  overflow: hidden;
+  z-index: 1;
+  transition: all $transition ease-in-out;
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    content: "";
+    background: none;
+    border-radius: 50%;
+    z-index: -1;
+    transform-origin: center;
+    transition: all $transition ease-in-out;
+  }
+  &:hover {
+    color: $colorResaltado;
+    cursor: pointer;
+    transition: all $transition ease-in-out;
+    &::after {
+      background: $colorPrimario;
+      transform: scale(475);
+    }
+  }
+}
+
+@mixin clicEventTienda {
+  &Pink:checked {
+    & ~ .shop1 {
+      opacity: 1;
+    }
+    & ~ .label-pink {
+      outline: auto 1px $colorSecundario;
+      outline-offset: 3px;
+    }
+  }
+  &Black:checked {
+    & ~ .shop2 {
+      opacity: 1;
+    }
+    & ~ .label-black {
+      outline: auto 1px $colorPrimario;
+      outline-offset: 3px;
+    }
+  }
 }
 
 ////////////////////////////////////////
-// 2- ESTILOS UNIVERSALES
+// 3- ESTILOS UNIVERSALES
 ////////////////////////////////////////
 
 * {
@@ -25,7 +76,7 @@ $colorBg: #f5f5f5;
 }
 
 ////////////////////////////////////////
-// 3- ESTILOS GENERALES
+// 4- ESTILOS GENERALES
 ////////////////////////////////////////
 
 body {
@@ -68,7 +119,7 @@ body {
 }
 
 ////////////////////////////////////////
-// 4- HEADER
+// 5- HEADER
 ////////////////////////////////////////
 
 .header_container {
@@ -93,7 +144,7 @@ body {
 }
 
 ////////////////////////////////////////
-// 5- MAIN -- INDEX
+// 6- MAIN -- INDEX
 ////////////////////////////////////////
 
 .carousel {
@@ -102,8 +153,8 @@ body {
     grid-template-columns: 10px auto 10px;
   }
   &-item {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
     grid-column-start: 2;
     grid-row-start: 1;
     img {
@@ -116,10 +167,131 @@ body {
       box-shadow: $colorPrimario 14px 0;
     }
   }
+  &-plusIcon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 1.3rem;
+    color: $colorPrimario;
+    cursor: pointer;
+  }
+  &-control {
+    &-prev,
+    &-next {
+      width: fit-content;
+      height: fit-content;
+      top: calc(50% - 36px);
+      padding: 0 8px;
+      font-size: 3rem;
+      color: $colorSecundario;
+      opacity: 0.4;
+      &:hover,
+      &:focus {
+        color: $colorSecundario;
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+@keyframes imgMov {
+  0% {
+    transform: scale(1.006);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.006);
+  }
+}
+
+.home {
+  grid-template-columns: repeat(4, auto);
+  margin-top: 12px;
+  &-imgContainer {
+    position: relative;
+    overflow: hidden;
+  }
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    &__4 {
+      object-position: -60px;
+    }
+  }
+  &-img__1:hover,
+  &-img__2:hover,
+  &-img__3:hover,
+  &-img__4:hover {
+    cursor: pointer;
+    animation: imgMov ease-in-out 4s infinite;
+    & ~ .home-plusIcon {
+      opacity: 1;
+      transition: opacity 200ms ease;
+      animation: imgMov ease-in-out 4s infinite;
+    }
+  }
+  &-plusIcon {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.5rem;
+    font-size: 1rem;
+    color: $colorResaltado;
+    opacity: 0;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+      animation: imgMov ease-in-out 4s infinite;
+    }
+  }
 }
 
 ////////////////////////////////////////
-// 6- MAIN -- NUEVO LANZAMIENTO
+// 7- MAIN -- MODAL
+////////////////////////////////////////
+
+.modal {
+  &-dialog,
+  &-content {
+    width: 90vw;
+    max-width: 900px;
+    min-width: 288px;
+    height: 85vh;
+  }
+  &-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &-imgContainer {
+      width: 100%;
+      height: 50%;
+    }
+    &-body {
+      width: 100%;
+      height: 50%;
+    }
+  }
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    &__4 {
+      object-position: -60px;
+    }
+  }
+  &-btn-close {
+    position: absolute;
+    right: 0.8rem;
+    top: 0.8rem;
+    padding: 4px;
+    color: $colorResaltado;
+  }
+}
+////////////////////////////////////////
+// 8- MAIN -- NUEVO LANZAMIENTO
 ////////////////////////////////////////
 
 .marquee {
@@ -149,8 +321,22 @@ body {
   }
 }
 
+.linkSpoti {
+  right: -12px;
+  height: 70px;
+  width: 70px;
+  background-color: $colorPrimario;
+  &-icon {
+    font-size: 2.8rem;
+    color: $colorResaltado;
+    &:hover {
+      color: $colorResaltado;
+    }
+  }
+}
+
 .cardDisc_container {
-  background-image: url(../img/bg_caos.jpg);
+  background-image: url(../assets/img/bg/bg_caos.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -176,7 +362,7 @@ body {
   background-color: transparent;
   color: $colorResaltado;
   &-btn {
-    @include btn(100px);
+    @include btn(100px, 0.5s);
   }
   &-audio {
     visibility: hidden;
@@ -189,7 +375,7 @@ body {
 }
 
 ////////////////////////////////////////
-// 7- MAIN -- GALERÍA
+// 9- MAIN -- GALERÍA
 ////////////////////////////////////////
 
 .imgGaleria_container {
@@ -203,7 +389,7 @@ body {
 }
 
 ////////////////////////////////////////
-// 8- MAIN -- TOUR
+// 10- MAIN -- TOUR
 ////////////////////////////////////////
 
 .cardTourSection_container {
@@ -226,7 +412,7 @@ body {
     font-size: 1.2rem;
   }
   &-btn {
-    @include btn(100%);
+    @include btn(100%, 0.25s);
     max-width: 475px;
   }
 }
@@ -237,7 +423,7 @@ hr {
 }
 
 ////////////////////////////////////////
-// 9- MAIN -- TIENDA
+// 11- MAIN -- TIENDA
 ////////////////////////////////////////
 
 .shopCard {
@@ -245,24 +431,63 @@ hr {
     width: 100%;
     min-width: 225px;
     height: 270px;
+    opacity: 0;
+    transition: all 600ms;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
+  &-pinSet {
+    opacity: 1;
+  }
   &-btn {
-    @include btn(50%);
+    @include btn(50%, 0.3s);
   }
 }
 
+.label {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  &-pink {
+    background-color: $colorSecundario;
+    position: relative;
+    top: 13px;
+  }
+  &-black {
+    background-color: $colorPrimario;
+    position: relative;
+    top: -7px;
+    right: -30px;
+  }
+}
+
+.shop2 {
+  padding: 0px 12px;
+}
+
+#carcasa {
+  @include clicEventTienda();
+}
+
+#bolso {
+  @include clicEventTienda();
+}
+
+#skate {
+  @include clicEventTienda();
+}
+
 ////////////////////////////////////////
-// 10- MAIN -- CONTACTO
+// 12- MAIN -- CONTACTO
 ////////////////////////////////////////
 
 .form {
   &-bg {
-    background-image: url(../img/bg_contacto.jpg);
+    background-image: url(../assets/img/bg/bg_contacto.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -295,7 +520,7 @@ hr {
 }
 
 ////////////////////////////////////////
-// 11- FOOTER
+// 13- FOOTER
 ////////////////////////////////////////
 
 .footer {
@@ -340,13 +565,13 @@ hr {
 }
 
 ////////////////////////////////////////
-// 12- MEDIA QUERIES
+// 14- MEDIA QUERIES
 ////////////////////////////////////////
 
 @import "./partials/mediaQueries";
 
 ////////////////////////////////////////
-// 13- ANIMACIONES
+// 15- ANIMACIONES
 ////////////////////////////////////////
 
 /**--------- NAV ---------**/
@@ -373,37 +598,6 @@ hr {
     & .leftCode,
     & .rightCode {
       transform: translate(0);
-    }
-  }
-}
-
-/**--------- BOTONES ---------**/
-
-.btn {
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: all 0.5s ease-in-out;
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1px;
-    height: 1px;
-    content: "";
-    background: none;
-    border-radius: 50%;
-    z-index: -1;
-    transform-origin: center;
-    transition: all 0.5s ease-in-out;
-  }
-  &:hover {
-    color: $colorResaltado;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    &::after {
-      background: $colorPrimario;
-      transform: scale(475);
     }
   }
 }
