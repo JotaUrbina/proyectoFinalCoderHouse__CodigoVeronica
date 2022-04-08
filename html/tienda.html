@@ -23,6 +23,10 @@
     <!------------ÍCONOS BOOTSTRAP------------>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
+
+    <!------------FAVICON------------>
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon_1.png" type="image/x-icon">
+
     <!------------STYLE------------>
     <link rel="stylesheet" href="../css/style.css">
 
@@ -43,7 +47,7 @@
             <!------------MENU------------>
 
             <div class="col-5 d-flex justify-content-end align-items-center">
-                <h6 class="fs-6 pe-5 pe-md-3">menú</h6>
+                <h6 class="fs-6 pe-5 pe-md-3">Menú</h6>
             </div>
 
             <!------------NAVBAR------------>
@@ -58,21 +62,32 @@
 
                     <div class="w-100 offcanvas-header d-flex justify-content-end align-items-center xIcon_container icon_container"
                         data-bs-dismiss="offcanvas" aria-label="Close">
-                        <h6 class="fs-6 pe-2 menuClose_txt">cerrar</h6>
+                        <h6 class="fs-6 pe-2 menuClose_txt">Cerrar</h6>
                         <i class="bi bi-three-dots fs-2 menu_icon"></i>
                     </div>
 
                     <div class="offcanvas-body menuDesplegable_container">
                         <ul class="h-100 m-0 p-0 d-flex flex-column justify-content-center align-items-center">
-                            <li><a href="./tour.html" class="fs-1"><span
+                            <li>
+                                <a href="../index.html" class="fs-1"><span
+                                        class="blanco leftCode">&lsaquo;</span>Home<span
+                                        class="blanco rightCode">&rsaquo;</span></a>
+                            </li>
+                            <li>
+                                <a href="./tour.html" class="fs-1"><span
                                         class="blanco leftCode">&lsaquo;</span>Tour<span
-                                        class="blanco rightCode">&rsaquo;</span></a></li>
-                            <li><a href="./tienda.html" class="fs-1"><span
+                                        class="blanco rightCode">&rsaquo;</span></a>
+                            </li>
+                            <li>
+                                <a href="./tienda.html" class="fs-1"><span
                                         class="blanco leftCode">&lsaquo;</span>Tienda<span
-                                        class="blanco rightCode">&rsaquo;</span></a></li>
-                            <li><a href="./contacto.html" class="fs-1"><span
+                                        class="blanco rightCode">&rsaquo;</span></a>
+                            </li>
+                            <li>
+                                <a href="./contacto.html" class="fs-1"><span
                                         class="blanco leftCode">&lsaquo;</span>Contacto<span
-                                        class="blanco rightCode">&rsaquo;</span></a></li>
+                                        class="blanco rightCode">&rsaquo;</span></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -81,13 +96,14 @@
     </header>
 
     <!------------MAIN -- TOUR------------>
-    <main class="container-fluid">
+    <main class="container-fluid main">
         <section class="row mt-5">
-            <h2 class="text-center my-0 main_title"><span class="rosado">&lsaquo;</span>tienda<span
+            <h2 class="text-center my-0 main_title"><span class="rosado">&lsaquo;</span>Tienda<span
                     class="rosado">&rsaquo;</span>
             </h2>
-            <p class="text-center main_subtitle">encuentra los productos oficiales de la banda y lleva tu pasión a todas
-                partes
+            <p class="text-center main_subtitle">Encuentra los productos oficiales de la banda y lleva
+                tu pasión a todas
+                partes.
             </p>
 
             <!------------CARDS TTIENDA------------>
@@ -127,7 +143,7 @@
                 <label for="bolsoBlack" class="label label-black"></label>
                 <div class="card-body p-0">
                     <div class="d-flex justify-content-between">
-                        <p>Tote bag</p>
+                        <p>Bolsa ecológica</p>
                         <p>$19.990</p>
                     </div>
                     <button class="btn shopCard-btn">Comprar</button>
@@ -187,10 +203,10 @@
             <div class="py-1 p-md-0 d-flex justify-content-around align-items-center col-md-6 justify-content-md-end">
                 <p class="my-0 footer-listenTxt">Escúchanos en:</p>
                 <a href="https://open.spotify.com/artist/7HV0vLy0KmbbaZgwZ2vmis?si=URTirPgrTv2OlYW3Z39Ouw"
-                    class=" footer-link">
+                    class=" footer-link" target="_blank">
                     <i class="bi bi-spotify mx-2 fs-5 footer-link__icon">Spotify</i>
                 </a>
-                <a href="#" class="footer-link">
+                <a href="https://www.apple.com/cl/apple-music/" class="footer-link" target="_blank">
                     <i class="bi bi-apple mx-2 fs-5 footer-link__icon">MUSIC</i>
                 </a>
             </div>

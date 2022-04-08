@@ -1,3 +1,7 @@
+////////////////////////////////////////
+// 1- MEDIA QUERIES -- 470px
+////////////////////////////////////////
+
 @media screen and (min-width: 470px) {
   .modal-card {
     &-imgContainer {
@@ -21,7 +25,7 @@
       height: 490px;
     }
     &-plusIcon {
-      font-size: 2rem;
+      font-size: 1rem;
     }
   }
 
@@ -50,7 +54,7 @@
 }
 
 ////////////////////////////////////////
-// 2- MEDIA QUERIES -- 650px
+// 2- MEDIA QUERIES -- 710px
 ////////////////////////////////////////
 
 @media screen and (min-width: 710px) {
@@ -98,6 +102,12 @@
     &-item {
       width: 580px;
       height: 580px;
+    }
+  }
+
+  .home {
+    &-plusIcon {
+      font-size: 1rem;
     }
   }
 

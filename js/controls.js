@@ -26,87 +26,75 @@ document.addEventListener(
 
 playPause_18.addEventListener("click", () => {
   if (audio_18.paused || audio_18.ended) {
+    audio_18.play();
     playPause_18.querySelector(".pause-btn").classList.toggle("hide");
     playPause_18.querySelector(".play-btn").classList.toggle("hide");
-    audio_18.play();
   } else {
     audio_18.pause();
-    playPause_18.querySelector(".pause-btn").classList.toggle("hide");
-    playPause_18.querySelector(".play-btn").classList.toggle("hide");
   }
 });
 
 playPause_otraVez.addEventListener("click", () => {
   if (audio_otraVez.paused || audio_otraVez.ended) {
+    audio_otraVez.play();
     playPause_otraVez.querySelector(".pause-btn").classList.toggle("hide");
     playPause_otraVez.querySelector(".play-btn").classList.toggle("hide");
-    audio_otraVez.play();
   } else {
     audio_otraVez.pause();
-    playPause_otraVez.querySelector(".pause-btn").classList.toggle("hide");
-    playPause_otraVez.querySelector(".play-btn").classList.toggle("hide");
   }
 });
 
 playPause_derrumbar.addEventListener("click", () => {
   if (audio_derrumbar.paused || audio_derrumbar.ended) {
+    audio_derrumbar.play();
     playPause_derrumbar.querySelector(".pause-btn").classList.toggle("hide");
     playPause_derrumbar.querySelector(".play-btn").classList.toggle("hide");
-    audio_derrumbar.play();
   } else {
     audio_derrumbar.pause();
-    playPause_derrumbar.querySelector(".pause-btn").classList.toggle("hide");
-    playPause_derrumbar.querySelector(".play-btn").classList.toggle("hide");
   }
 });
 
 playPause_estarBien.addEventListener("click", () => {
   if (audio_estarBien.paused || audio_estarBien.ended) {
+    audio_estarBien.play();
     playPause_estarBien.querySelector(".pause-btn").classList.toggle("hide");
     playPause_estarBien.querySelector(".play-btn").classList.toggle("hide");
-    audio_estarBien.play();
   } else {
     audio_estarBien.pause();
-    playPause_estarBien.querySelector(".pause-btn").classList.toggle("hide");
-    playPause_estarBien.querySelector(".play-btn").classList.toggle("hide");
   }
 });
 
 playPause_latidos.addEventListener("click", () => {
   if (audio_latidos.paused || audio_latidos.ended) {
+    audio_latidos.play();
     playPause_latidos.querySelector(".pause-btn").classList.toggle("hide");
     playPause_latidos.querySelector(".play-btn").classList.toggle("hide");
-    audio_latidos.play();
   } else {
     audio_latidos.pause();
-    playPause_latidos.querySelector(".pause-btn").classList.toggle("hide");
-    playPause_latidos.querySelector(".play-btn").classList.toggle("hide");
   }
 });
 
 playPause_pena.addEventListener("click", () => {
   if (audio_pena.paused || audio_pena.ended) {
+    audio_pena.play();
     playPause_pena.querySelector(".pause-btn").classList.toggle("hide");
     playPause_pena.querySelector(".play-btn").classList.toggle("hide");
-    audio_pena.play();
   } else {
     audio_pena.pause();
-    playPause_pena.querySelector(".pause-btn").classList.toggle("hide");
-    playPause_pena.querySelector(".play-btn").classList.toggle("hide");
   }
 });
 
 audio_18.addEventListener("pause", () => {
-  if (audio_pena.play && audio_18.paused) {
+  if (audio_otraVez.play) {
     playPause_18.querySelector(".pause-btn").classList.toggle("hide");
     playPause_18.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_latidos.play && audio_18.paused) {
+  } else if (audio_derrumbar.play) {
     playPause_18.querySelector(".pause-btn").classList.toggle("hide");
     playPause_18.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_estarBien.play && audio_18.paused) {
+  } else if (audio_estarBien.play) {
     playPause_18.querySelector(".pause-btn").classList.toggle("hide");
     playPause_18.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_derrumbar.play && audio_18.paused) {
+  } else if (audio_latidos.play) {
     playPause_18.querySelector(".pause-btn").classList.toggle("hide");
     playPause_18.querySelector(".play-btn").classList.toggle("hide");
   } else {
@@ -116,16 +104,16 @@ audio_18.addEventListener("pause", () => {
 });
 
 audio_otraVez.addEventListener("pause", () => {
-  if (audio_pena.play && audio_otraVez.paused) {
+  if (audio_18.play) {
     playPause_otraVez.querySelector(".pause-btn").classList.toggle("hide");
     playPause_otraVez.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_latidos.play && audio_otraVez.paused) {
+  } else if (audio_derrumbar.play) {
     playPause_otraVez.querySelector(".pause-btn").classList.toggle("hide");
     playPause_otraVez.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_estarBien.play && audio_otraVez.paused) {
+  } else if (audio_estarBien.play) {
     playPause_otraVez.querySelector(".pause-btn").classList.toggle("hide");
     playPause_otraVez.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_derrumbar.play && audio_otraVez.paused) {
+  } else if (audio_latidos.play) {
     playPause_otraVez.querySelector(".pause-btn").classList.toggle("hide");
     playPause_otraVez.querySelector(".play-btn").classList.toggle("hide");
   } else {
@@ -135,16 +123,16 @@ audio_otraVez.addEventListener("pause", () => {
 });
 
 audio_derrumbar.addEventListener("pause", () => {
-  if (audio_pena.play && audio_derrumbar.paused) {
+  if (audio_18.play) {
     playPause_derrumbar.querySelector(".pause-btn").classList.toggle("hide");
     playPause_derrumbar.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_latidos.play && audio_derrumbar.paused) {
+  } else if (audio_otraVez.play) {
     playPause_derrumbar.querySelector(".pause-btn").classList.toggle("hide");
     playPause_derrumbar.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_estarBien.play && audio_derrumbar.paused) {
+  } else if (audio_estarBien.play) {
     playPause_derrumbar.querySelector(".pause-btn").classList.toggle("hide");
     playPause_derrumbar.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_otraVez.play && audio_derrumbar.paused) {
+  } else if (audio_latidos.play) {
     playPause_derrumbar.querySelector(".pause-btn").classList.toggle("hide");
     playPause_derrumbar.querySelector(".play-btn").classList.toggle("hide");
   } else {
@@ -154,16 +142,16 @@ audio_derrumbar.addEventListener("pause", () => {
 });
 
 audio_estarBien.addEventListener("pause", () => {
-  if (audio_pena.play && audio_estarBien.paused) {
+  if (audio_18.play) {
     playPause_estarBien.querySelector(".pause-btn").classList.toggle("hide");
     playPause_estarBien.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_latidos.play && audio_estarBien.paused) {
+  } else if (audio_otraVez.play) {
     playPause_estarBien.querySelector(".pause-btn").classList.toggle("hide");
     playPause_estarBien.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_derrumbar.play && audio_estarBien.paused) {
+  } else if (audio_derrumbar.play) {
     playPause_estarBien.querySelector(".pause-btn").classList.toggle("hide");
     playPause_estarBien.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_otraVez.play && audio_estarBien.paused) {
+  } else if (audio_latidos.play) {
     playPause_estarBien.querySelector(".pause-btn").classList.toggle("hide");
     playPause_estarBien.querySelector(".play-btn").classList.toggle("hide");
   } else {
@@ -173,16 +161,16 @@ audio_estarBien.addEventListener("pause", () => {
 });
 
 audio_latidos.addEventListener("pause", () => {
-  if (audio_pena.play && audio_latidos.paused) {
+  if (audio_18.play) {
     playPause_latidos.querySelector(".pause-btn").classList.toggle("hide");
     playPause_latidos.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_estarBien.play && audio_latidos.paused) {
+  } else if (audio_otraVez.play) {
     playPause_latidos.querySelector(".pause-btn").classList.toggle("hide");
     playPause_latidos.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_derrumbar.play && audio_latidos.paused) {
+  } else if (audio_derrumbar.play) {
     playPause_latidos.querySelector(".pause-btn").classList.toggle("hide");
     playPause_latidos.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_otraVez.play && audio_latidos.paused) {
+  } else if (audio_estarBien.play) {
     playPause_latidos.querySelector(".pause-btn").classList.toggle("hide");
     playPause_latidos.querySelector(".play-btn").classList.toggle("hide");
   } else {
@@ -192,16 +180,16 @@ audio_latidos.addEventListener("pause", () => {
 });
 
 audio_pena.addEventListener("pause", () => {
-  if (audio_latidos.play && audio_pena.paused) {
+  if (audio_18.play) {
     playPause_pena.querySelector(".pause-btn").classList.toggle("hide");
     playPause_pena.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_estarBien.play && audio_pena.paused) {
+  } else if (audio_otraVez.play) {
     playPause_pena.querySelector(".pause-btn").classList.toggle("hide");
     playPause_pena.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_derrumbar.play && audio_pena.paused) {
+  } else if (audio_derrumbar.play) {
     playPause_pena.querySelector(".pause-btn").classList.toggle("hide");
     playPause_pena.querySelector(".play-btn").classList.toggle("hide");
-  } else if (audio_otraVez.play && audio_pena.paused) {
+  } else if (audio_estarBien.play) {
     playPause_pena.querySelector(".pause-btn").classList.toggle("hide");
     playPause_pena.querySelector(".play-btn").classList.toggle("hide");
   } else {

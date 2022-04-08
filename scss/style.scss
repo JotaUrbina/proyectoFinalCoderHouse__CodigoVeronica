@@ -1,3 +1,19 @@
+// LÍNEA 18  -- VARIABLES
+// LÍNEA 27  -- MIXINS
+// LÍNEA 85  -- ANIMACIONES
+// LÍNEA 110 -- ESTILOS UNIVERSALES
+// LÍNEA 120 -- ESTILOS GENERALES
+// LÍNEA 164 -- HEADER
+// LÍNEA 211 -- MAIN - INDEX - CARRUSEL
+// LÍNEA 306 -- MAIN - INDEX - MODAL
+// LÍNEA 371 -- MAIN - INDEX - NUEVO LANZAMIENTO
+// LÍNEA 446 -- MAIN - INDEX - GALERÍA
+// LÍNEA 460 -- MAIN - TOUR
+// LÍNEA 494 -- MAIN - TIENDA
+// LÍNEA 553 -- MAIN - CONTACTO
+// LÍNEA 599 -- FOOTER
+// LÍNEA 644 -- MEDIA QUERIES
+
 ////////////////////////////////////////
 // 1- VARIABLES
 ////////////////////////////////////////
@@ -66,7 +82,32 @@ $colorBg: #f5f5f5;
 }
 
 ////////////////////////////////////////
-// 3- ESTILOS UNIVERSALES
+// 3- ANIMACIONES
+////////////////////////////////////////
+@keyframes imgMov {
+  0% {
+    transform: scale(1.006);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.006);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0%, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+////////////////////////////////////////
+// 4- ESTILOS UNIVERSALES
 ////////////////////////////////////////
 
 * {
@@ -76,7 +117,7 @@ $colorBg: #f5f5f5;
 }
 
 ////////////////////////////////////////
-// 4- ESTILOS GENERALES
+// 5- ESTILOS GENERALES
 ////////////////////////////////////////
 
 body {
@@ -100,6 +141,7 @@ body {
 }
 
 .main {
+  max-width: 1550px;
   &_title {
     font-size: 3.2rem;
   }
@@ -119,7 +161,7 @@ body {
 }
 
 ////////////////////////////////////////
-// 5- HEADER
+// 6- HEADER
 ////////////////////////////////////////
 
 .header_container {
@@ -140,11 +182,33 @@ body {
   }
   .menuDesplegable_container {
     background-color: $colorSecundario;
+    .blanco {
+      color: $colorResaltado;
+      opacity: 0;
+    }
+    .leftCode {
+      display: inline-block;
+      transform: translate(-60px);
+    }
+    .rightCode {
+      display: inline-block;
+      transform: translate(60px);
+    }
+    a:hover {
+      & .blanco {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+      }
+      & .leftCode,
+      & .rightCode {
+        transform: translate(0);
+      }
+    }
   }
 }
 
 ////////////////////////////////////////
-// 6- MAIN -- INDEX
+// 7- MAIN -- INDEX - CARRUSEL
 ////////////////////////////////////////
 
 .carousel {
@@ -171,8 +235,8 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
-    font-size: 1.3rem;
-    color: $colorPrimario;
+    font-family: "Rubik", sans-serif;
+    font-size: 0.8rem;
     cursor: pointer;
   }
   &-control {
@@ -191,19 +255,6 @@ body {
         opacity: 0.9;
       }
     }
-  }
-}
-
-@keyframes imgMov {
-  0% {
-    transform: scale(1.006);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1.006);
   }
 }
 
@@ -238,19 +289,21 @@ body {
     position: absolute;
     right: 1rem;
     bottom: 0.5rem;
-    font-size: 1rem;
+    font-family: "Rubik", sans-serif;
+    font-size: 0.6rem;
     color: $colorResaltado;
     opacity: 0;
-    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     &:hover {
       opacity: 1;
       animation: imgMov ease-in-out 4s infinite;
+      cursor: pointer;
     }
   }
 }
 
 ////////////////////////////////////////
-// 7- MAIN -- MODAL
+// 8- MAIN -- INDEX - MODAL
 ////////////////////////////////////////
 
 .modal {
@@ -282,16 +335,40 @@ body {
       object-position: -60px;
     }
   }
+  &-link {
+    &-lCode {
+      display: inline-block;
+      color: $colorSecundario;
+      opacity: 0;
+      transform: translate(-40px);
+      transition: all 300ms ease-in-out;
+    }
+    &-rCode {
+      @extend .modal-link-lCode;
+      transform: translate(40px);
+    }
+    &:hover &-lCode,
+    &:hover &-rCode,
+    &:active &-lCode,
+    &:active &-rCode,
+    &:focus &-lCode,
+    &:focus &-rCode {
+      transform: translate(0);
+      opacity: (1);
+    }
+  }
+
   &-btn-close {
     position: absolute;
     right: 0.8rem;
     top: 0.8rem;
-    padding: 4px;
+    padding: 12px;
     color: $colorResaltado;
   }
 }
+
 ////////////////////////////////////////
-// 8- MAIN -- NUEVO LANZAMIENTO
+// 9- MAIN -- INDEX - NUEVO LANZAMIENTO
 ////////////////////////////////////////
 
 .marquee {
@@ -301,7 +378,7 @@ body {
   background-color: $colorSecundario;
   transform: rotate(5deg);
   h2 {
-    animation: marquee 3s linear infinite reverse;
+    animation: marquee 3s linear infinite alternate-reverse;
   }
 }
 
@@ -309,15 +386,6 @@ body {
   transform: rotate(-5deg);
   h2 {
     animation: marquee 3s linear infinite alternate;
-  }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-50%, 0);
   }
 }
 
@@ -375,7 +443,7 @@ body {
 }
 
 ////////////////////////////////////////
-// 9- MAIN -- GALERÍA
+// 10- MAIN -- INDEX - GALERÍA
 ////////////////////////////////////////
 
 .imgGaleria_container {
@@ -389,7 +457,7 @@ body {
 }
 
 ////////////////////////////////////////
-// 10- MAIN -- TOUR
+// 11- MAIN -- TOUR
 ////////////////////////////////////////
 
 .cardTourSection_container {
@@ -423,7 +491,7 @@ hr {
 }
 
 ////////////////////////////////////////
-// 11- MAIN -- TIENDA
+// 12- MAIN -- TIENDA
 ////////////////////////////////////////
 
 .shopCard {
@@ -482,7 +550,7 @@ hr {
 }
 
 ////////////////////////////////////////
-// 12- MAIN -- CONTACTO
+// 13- MAIN -- CONTACTO
 ////////////////////////////////////////
 
 .form {
@@ -503,6 +571,14 @@ hr {
     &::placeholder {
       color: $colorPrimario;
     }
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 30px $colorSecundario inset;
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: 0 0 0 30px $colorSecundario inset;
+      }
+    }
   }
   &-btn {
     width: 52px;
@@ -520,7 +596,7 @@ hr {
 }
 
 ////////////////////////////////////////
-// 13- FOOTER
+// 14- FOOTER
 ////////////////////////////////////////
 
 .footer {
@@ -565,39 +641,7 @@ hr {
 }
 
 ////////////////////////////////////////
-// 14- MEDIA QUERIES
+// 15- MEDIA QUERIES
 ////////////////////////////////////////
 
 @import "./partials/mediaQueries";
-
-////////////////////////////////////////
-// 15- ANIMACIONES
-////////////////////////////////////////
-
-/**--------- NAV ---------**/
-
-.menuDesplegable_container {
-  .blanco {
-    color: $colorResaltado;
-    opacity: 0;
-  }
-  .leftCode {
-    display: inline-block;
-    transform: translate(-60px);
-  }
-  .rightCode {
-    display: inline-block;
-    transform: translate(60px);
-  }
-  a:hover {
-    opacity: 1;
-    & .blanco {
-      transition: all 0.3s ease-in-out;
-      opacity: 1;
-    }
-    & .leftCode,
-    & .rightCode {
-      transform: translate(0);
-    }
-  }
-}

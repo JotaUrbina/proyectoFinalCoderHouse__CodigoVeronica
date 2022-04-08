@@ -17,6 +17,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
     <!------------BOOTSTRAP------------>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -26,6 +30,9 @@
 
     <!------------AOS------------>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!------------FAVICON------------>
+    <link rel="shortcut icon" href="./assets/img/favicon/favicon_1.png" type="image/x-icon">
 
     <!------------STYLE------------>
     <link rel="stylesheet" href="./css/style.css">
@@ -47,7 +54,7 @@
             <!------------MENU------------>
 
             <div class="col-5 d-flex justify-content-end align-items-center">
-                <h6 class="fs-6 pe-5 pe-md-3">menú</h6>
+                <h6 class="fs-6 pe-5 pe-md-3">Menú</h6>
             </div>
 
             <!------------NAVBAR------------>
@@ -62,21 +69,32 @@
 
                     <div class="w-100 offcanvas-header d-flex justify-content-end align-items-center icon_container"
                         data-bs-dismiss="offcanvas" aria-label="Close">
-                        <h6 class="fs-6 pe-2 menuClose_txt">cerrar</h6>
+                        <h6 class="fs-6 pe-2 menuClose_txt">Cerrar</h6>
                         <i class="bi bi-three-dots fs-2 menu_icon"></i>
                     </div>
 
                     <div class="offcanvas-body menuDesplegable_container">
                         <ul class="h-100 m-0 p-0 d-flex flex-column justify-content-center align-items-center">
-                            <li><a href="./html/tour.html" class="fs-1"><span
+                            <li>
+                                <a href="./index.html" class="fs-1"><span
+                                        class="blanco leftCode">&lsaquo;</span>Home<span
+                                        class="blanco rightCode">&rsaquo;</span></a>
+                            </li>
+                            <li>
+                                <a href="./html/tour.html" class="fs-1"><span
                                         class="blanco leftCode">&lsaquo;</span>Tour<span
-                                        class="blanco rightCode">&rsaquo;</span></a></li>
-                            <li><a href="./html/tienda.html" class="fs-1"><span
+                                        class="blanco rightCode">&rsaquo;</span></a>
+                            </li>
+                            <li>
+                                <a href="./html/tienda.html" class="fs-1"><span
                                         class="blanco leftCode">&lsaquo;</span>Tienda<span
-                                        class="blanco rightCode">&rsaquo;</span></a></li>
-                            <li><a href="./html/contacto.html" class="fs-1"><span
+                                        class="blanco rightCode">&rsaquo;</span></a>
+                            </li>
+                            <li>
+                                <a href="./html/contacto.html" class="fs-1"><span
                                         class="blanco leftCode">&lsaquo;</span>Contacto<span
-                                        class="blanco rightCode">&rsaquo;</span></a></li>
+                                        class="blanco rightCode">&rsaquo;</span></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -84,8 +102,8 @@
         </div>
     </header>
 
-    <main class="container-fluid">
-
+    <!------------MAIN------------>
+    <main class="container-fluid main">
         <!------------CARRUSEL------------>
         <section class="row">
             <div id="carouselExampleControls" class="carousel slide carousel-fade mt-5 d-md-none"
@@ -95,32 +113,28 @@
                         data-bs-interval="3000">
                         <img src="./assets/img/carrusel/guitarrista.jpg" class="rounded-circle"
                             alt="Javier Urbina - Guitarrista" data-bs-toggle="modal" data-bs-target="#modal_1">
-                        <i class="bi bi-plus-circle carousel-plusIcon" data-bs-toggle="modal"
-                            data-bs-target="#modal_1"></i>
+                        <span class="carousel-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_1">+info</span>
                     </figure>
 
                     <figure class="carousel-item imgCarrusel_container mx-auto position-relative"
                         data-bs-interval="3000">
                         <img src="./assets/img/carrusel/bajista.jpg" class="rounded-circle" alt="Hass Nachar - Bajista"
                             data-bs-toggle="modal" data-bs-target="#modal_2">
-                        <i class="bi bi-plus-circle carousel-plusIcon" data-bs-toggle="modal"
-                            data-bs-target="#modal_2"></i>
+                        <span class="carousel-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_2">+info</span>
                     </figure>
 
                     <figure class="carousel-item imgCarrusel_container mx-auto position-relative"
                         data-bs-interval="3000">
                         <img src="./assets/img/carrusel/baterista.jpg" class="rounded-circle"
                             alt="Mati Reyes - Baterista" data-bs-toggle="modal" data-bs-target="#modal_3">
-                        <i class="bi bi-plus-circle carousel-plusIcon" data-bs-toggle="modal"
-                            data-bs-target="#modal_3"></i>
+                        <span class="carousel-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_3">+info</span>
                     </figure>
 
                     <figure class="carousel-item imgCarrusel_container mx-auto position-relative"
                         data-bs-interval="3000">
                         <img src="./assets/img/carrusel/vocalista.jpg" class="rounded-circle"
                             alt="Jorge Salazar - Vocalista" data-bs-toggle="modal" data-bs-target="#modal_4">
-                        <i class="bi bi-plus-circle carousel-plusIcon" data-bs-toggle="modal"
-                            data-bs-target="#modal_4"></i>
+                        <span class="carousel-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_4">+info</span>
                     </figure>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -139,48 +153,50 @@
                 <figure class="home-imgContainer">
                     <img src="./assets/img/carrusel/guitarrista.jpg" alt="Javier Urbina - Guitarrista"
                         class="home-img home-img__1" data-bs-toggle="modal" data-bs-target="#modal_1">
-                    <i class="bi bi-plus-circle home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_1"></i>
+                    <span class="home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_1">+info</span>
                 </figure>
                 <figure class="home-imgContainer">
                     <img src="./assets/img/carrusel/bajista.jpg" alt="Hass Nachar - Bajista"
                         class="home-img home-img__2" data-bs-toggle="modal" data-bs-target="#modal_2">
-                    <i class="bi bi-plus-circle home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_2"></i>
+                    <span class="home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_2">+info</span>
                 </figure>
                 <figure class="home-imgContainer">
                     <img src="./assets/img/carrusel/baterista.jpg" alt="Mati Reyes - Baterista"
                         class="home-img home-img__3" data-bs-toggle="modal" data-bs-target="#modal_3">
-                    <i class="bi bi-plus-circle home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_3"></i>
+                    <span class="home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_3">+info</span>
                 </figure class="home-imgContainer">
                 <figure class="home-imgContainer">
                     <img src="./assets/img/carrusel/vocalista.jpg" alt="Jorge Salazar - Vocalista"
                         class="home-img home-img__4" data-bs-toggle="modal" data-bs-target="#modal_4">
-                    <i class="bi bi-plus-circle home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_4"></i>
+                    <span class="home-plusIcon" data-bs-toggle="modal" data-bs-target="#modal_4">+info</span>
                 </figure>
             </div>
             <!------------MODAL------------>
             <div class="modal fade" id="modal_1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered mx-auto">
                     <div class="modal-content">
-
                         <div class="card modal-card">
                             <i class="bi bi-x-lg modal-btn-close" type="button" data-bs-dismiss="modal"
                                 aria-label="Close"></i>
                             <div class="modal-card-imgContainer">
                                 <img src="./assets/img/carrusel/guitarrista.jpg" class="card-img-top modal-img"
-                                    alt="...">
+                                    alt="Javier Urbina - Guitarrista">
                             </div>
                             <div class="card-body d-flex flex-column justify-content-between modal-card-body">
                                 <div>
-                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>javier<span
-                                            class="rosado">&rsaquo;</span> urbina</h5>
-                                    <h6>guitarrista</h6>
-                                    <p class="card-text">inició de pequeño tocando en diferentes bandas de punk,
-                                        harcore, grunge y metal. con el tiempo dejó de tocar pero luego de reencontrarse
-                                        con viejos amigos su amor por la música renació y se unió a la banda</p>
+                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>Javier<span
+                                            class="rosado">&rsaquo;</span> Urbina</h5>
+                                    <h6>Guitarrista</h6>
+                                    <p class="card-text">Inició de pequeño tocando en diferentes bandas de punk,
+                                        hardcore, grunge y metal. Con el tiempo dejó de tocar pero luego de
+                                        reencontrarse
+                                        con viejos amigos su amor por la música renació y se unió a la banda.</p>
                                 </div>
                                 <div>
                                     <a href="https://www.instagram.com/_elkako/" target="_blank"
-                                        class="card-link">@_elKako</a>
+                                        class="card-link modal-link"><span
+                                            class="modal-link-lCode">&lsaquo;</span>@_elKako<span
+                                            class=" modal-link-rCode">&rsaquo;</span></a>
                                 </div>
                             </div>
                         </div>
@@ -195,20 +211,23 @@
                             <i class="bi bi-x-lg modal-btn-close" type="button" data-bs-dismiss="modal"
                                 aria-label="Close"></i>
                             <div class="modal-card-imgContainer">
-                                <img src="./assets/img/carrusel/bajista.jpg" class="card-img-top modal-img" alt="...">
+                                <img src="./assets/img/carrusel/bajista.jpg" class="card-img-top modal-img"
+                                    alt="Hass Nachar - Bajista">
                             </div>
                             <div class="card-body d-flex flex-column justify-content-between modal-card-body">
                                 <div>
-                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>hass<span
-                                            class="rosado">&rsaquo;</span> nachar</h5>
-                                    <h6>bajista</h6>
-                                    <p class="card-text">uno de los mejores exponentes de la IX región y sesionista de
-                                        importantes artistas nacioneles, decidió darle un giro a su carrera musical para
-                                        rockear con amigos</p>
+                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>Hass<span
+                                            class="rosado">&rsaquo;</span> Nachar</h5>
+                                    <h6>Bajista</h6>
+                                    <p class="card-text">Uno de los mejores exponentes de la IX región y sesionista de
+                                        importantes artistas nacioneles. Le dio un giro a su carrera musical para
+                                        tocar su propia música y estilo.</p>
                                 </div>
                                 <div>
                                     <a href="https://www.instagram.com/hass.nach/" target="_blank"
-                                        class="card-link">@hass.nach</a>
+                                        class="card-link modal-link"><span
+                                            class="modal-link-lCode">&lsaquo;</span>@hass.nach<span
+                                            class="modal-link-rCode">&rsaquo;</span></a>
                                 </div>
                             </div>
                         </div>
@@ -223,20 +242,23 @@
                             <i class="bi bi-x-lg modal-btn-close" type="button" data-bs-dismiss="modal"
                                 aria-label="Close"></i>
                             <div class="modal-card-imgContainer">
-                                <img src="./assets/img/carrusel/baterista.jpg" class="card-img-top modal-img" alt="...">
+                                <img src="./assets/img/carrusel/baterista.jpg" class="card-img-top modal-img"
+                                    alt="Mati Reyes - Baterista">
                             </div>
                             <div class="card-body d-flex flex-column justify-content-between modal-card-body">
                                 <div>
-                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>mati<span
-                                            class="rosado">&rsaquo;</span> reyes</h5>
-                                    <h6>baterista</h6>
-                                    <p class="card-text">músico y productor de grandes artistas nacionales, decidió
-                                        dividir su tiempo para jugárselas por un proyecto propio y hacer lo quemás ama
-                                        junto a grandes amigos</p>
+                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>Mati<span
+                                            class="rosado">&rsaquo;</span> Reyes</h5>
+                                    <h6>Baterista</h6>
+                                    <p class="card-text">Músico y productor de grandes artistas nacionales. Decidió
+                                        dedicar más tiempo para él y jugárselas por un proyecto propio para hacer lo que
+                                        más ama junto a grandes amigos</p>
                                 </div>
                                 <div>
                                     <a href="https://www.instagram.com/matireyesc/" target="_blank"
-                                        class="card-link">@matireyesc</a>
+                                        class="card-link modal-link"><span
+                                            class="modal-link-lCode">&lsaquo;</span>@matireyesc<span
+                                            class="modal-link-rCode">&rsaquo;</span></a>
                                 </div>
                             </div>
                         </div>
@@ -251,21 +273,24 @@
                             <i class="bi bi-x-lg modal-btn-close" type="button" data-bs-dismiss="modal"
                                 aria-label="Close"></i>
                             <div class="modal-card-imgContainer">
-                                <img src="./assets/img/carrusel/vocalista.jpg" class="card-img-top modal-img" alt="...">
+                                <img src="./assets/img/carrusel/vocalista.jpg" class="card-img-top modal-img"
+                                    alt="Jorge Salazar - Vocalista">
                             </div>
                             <div class="card-body d-flex flex-column justify-content-between modal-card-body">
                                 <div>
-                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>jorge<span
-                                            class="rosado">&rsaquo;</span> salazar</h5>
-                                    <h6>vocalista</h6>
-                                    <p class="card-text">dio sus primeros pasos durante su
-                                        adolecencia en escena del hardcore. luego de altos y bajos decide
+                                    <h5 class="card-title my-0"><span class="rosado">&lsaquo;</span>Jorge<span
+                                            class="rosado">&rsaquo;</span> Salazar</h5>
+                                    <h6>Vocalista</h6>
+                                    <p class="card-text">Dio sus primeros pasos durante su
+                                        adolecencia en la escena del hardcore. Luego de altos y bajos decide
                                         emprender un proyecto en solitario,la que luego
-                                        evolucionaría a código verónica.</p>
+                                        evolucionaría en código verónica.</p>
                                 </div>
                                 <div>
                                     <a href="https://www.instagram.com/salazarjrg/" target="_blank"
-                                        class="card-link">@salazarjrg</a>
+                                        class="card-link modal-link"><span
+                                            class="modal-link-lCode">&lsaquo;</span>@salazarjrg<span
+                                            class="modal-link-rCode">&rsaquo;</span></a>
                                 </div>
                             </div>
                         </div>
@@ -275,12 +300,14 @@
 
             <!------------BIO------------>
             <div class="mt-5">
-                <p class="my-0 text-center caos_subtitle_1">somos</p>
+                <p class="my-0 text-center caos_subtitle_1">Somos</p>
                 <h2 class="text-center main_title"><span class="rosado">&lsaquo;</span>código<span
                         class="rosado">&rsaquo;</span> verónica
                 </h2>
-                <p class="text-center w-md-25 mx-auto main_subtitle">una banda de pop punk rock con fuertes influencias
-                    de bandas de principios de los 2k, pero con un sonido e identidad propia del 2022
+                <p class="text-center col-md-10 col-lg-9 mx-auto main_subtitle">Una banda de pop punk rock con
+                    fuertes
+                    influencias
+                    de bandas de principios de los 2000, pero con un sonido e identidad propia del 2022.
                 </p>
             </div>
         </section>
@@ -325,7 +352,7 @@
                 <div
                     class="row pb-5 cardDisc_container d-flex flex-column justify-content-center align-items-center flex-md-row justify-content-md-evenly">
                     <div class="caos_container mt-5 d-flex flex-column align-items-center">
-                        <p class="my-0 caos_subtitle_1">nuevo disco</p>
+                        <p class="my-0 caos_subtitle_1">Nuevo disco</p>
                         <h2 class="caos_title">Caos<span class="punto"></span></h2>
                         <p class="caos_subtitle_2">y cosas de siempre</p>
                     </div>
@@ -334,52 +361,52 @@
                         <h5 class="card-title m-0 cardDiscSong_title discCard-title">18</h5>
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_18"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
-                        <audio controls id="audio_18" class="discCard-audio">
+                        <audio controls id="audio_18" class="discCard-audio" preload="auto">
                             <source src="./assets/mp3/clip18.mp3">
                         </audio>
                     </div>
 
                     <div class=" card-body d-flex justify-content-between align-items-center discCard">
-                        <h5 class="card-title m-0 cardDiscSong_title discCard-title">otra vez</h5>
+                        <h5 class="card-title m-0 cardDiscSong_title discCard-title">Otra vez</h5>
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_otraVez"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
-                        <audio controls id="audio_otraVez" class="discCard-audio">
+                        <audio controls id="audio_otraVez" class="discCard-audio" preload="auto">
                             <source src="./assets/mp3/clipOtraVez.mp3">
                         </audio>
                     </div>
 
                     <div class="card-body d-flex justify-content-between align-items-center discCard">
-                        <h5 class="card-title m-0 cardDiscSong_title discCard-title">se va a derrumbar</h5>
+                        <h5 class="card-title m-0 cardDiscSong_title discCard-title">Se va a derrumbar</h5>
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_derrumbar"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
-                        <audio controls id="audio_derrumbar" class="discCard-audio">
+                        <audio controls id="audio_derrumbar" class="discCard-audio" preload="auto">
                             <source src="./assets/mp3/clipSeVaaDerrumbar.mp3">
                         </audio>
                     </div>
 
                     <div class="card-body d-flex justify-content-between align-items-center discCard">
-                        <h5 class="card-title m-0 cardDiscSong_title discCard-title">todo va a estar bien</h5>
+                        <h5 class="card-title m-0 cardDiscSong_title discCard-title">Todo va a estar bien</h5>
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_estarBien"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
-                        <audio controls id="audio_estarBien" class="discCard-audio">
+                        <audio controls id="audio_estarBien" class="discCard-audio" preload="auto">
                             <source src="./assets/mp3/clipTodoVaaEstarBien.mp3">
                         </audio>
                     </div>
 
                     <div class="card-body d-flex justify-content-between align-items-center discCard">
-                        <h5 class="card-title m-0 cardDiscSong_title discCard-title">mis latidos</h5>
+                        <h5 class="card-title m-0 cardDiscSong_title discCard-title">Mis latidos</h5>
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_latidos"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
-                        <audio controls id="audio_latidos" class="discCard-audio">
+                        <audio controls id="audio_latidos" class="discCard-audio" preload="auto">
                             <source src="./assets/mp3/clipMisLatidos.mp3">
                         </audio>
                     </div>
 
                     <div class="card-body d-flex justify-content-between align-items-center discCard">
-                        <h5 class="card-title m-0 cardDiscSong_title discCard-title">vale la pena</h5>
+                        <h5 class="card-title m-0 cardDiscSong_title discCard-title">Vale la pena</h5>
                         <a class="btn cardBtn cardBtn__disc discCard-btn" id="play_pena"><span
                                 class="play-btn">play</span><span class="pause-btn hide">pause</span></a>
-                        <audio controls id="audio_pena" class="discCard-audio">
+                        <audio controls id="audio_pena" class="discCard-audio" preload="auto">
                             <source src="./assets/mp3/clipValeLaPena.mp3">
                         </audio>
                     </div>
@@ -389,24 +416,29 @@
 
         <!------------GALERÍA------------>
         <section class="row mt-5 mb-5">
-            <h2 class="my-0 text-center main_title"><span class="rosado">&lsaquo;</span>galería<span
+            <h2 class="my-0 text-center main_title"><span class="rosado">&lsaquo;</span>Galería<span
                     class="rosado">&rsaquo;</span>
             </h2>
-            <p class="text-center main_subtitle">revive las postales de nuestro show debut para el lanzamiento de
+            <p class="text-center col-sm-10 col-lg-8 mx-auto main_subtitle">Revive las postales de nuestro show debut
+                para el
+                lanzamiento
+                de
                 nuestro primer ep <span class="rosado">&lsaquo;</span>nunca es tarde<span class="rosado">&rsaquo;</span>
             </p>
 
             <div class="col-12 mt-5 galeria_container">
                 <figure class="mx-auto mb-1 imgGaleria_container imgGaleria_1" data-aos="flip-right">
                     <img src="./assets/img/carrusel/bajista.jpg"
-                        alt="Código Verónica - Show lanzamiento EP Nunca es tarde" class="img-fluid">
+                        alt="Código Verónica - Show lanzamiento del EP Nunca es tarde" class="img-fluid">
                 </figure>
                 <figure class="mx-auto mb-1 imgGaleria_container imgGaleria_2" data-aos="flip-left">
-                    <img src="./assets/img/galeria/img_1.jpg" alt="Código Verónica - Show lanzamiento EP Nunca es tarde"
+                    <img src="./assets/img/galeria/img_1.jpg"
+                        alt="Público en el show de lanzamiento del EP Nunca es tarde de la banda Código Verónica"
                         class="img-fluid">
                 </figure>
                 <figure class="mx-auto imgGaleria_container imgGaleria_3" data-aos="flip-right">
-                    <img src="./assets/img/galeria/img_2.jpg" alt="Código Verónica - Show lanzamiento EP Nunca es tarde"
+                    <img src="./assets/img/galeria/img_2.jpg"
+                        alt="Público en el show de lanzamiento del EP Nunca es tarde de la banda Código Verónica"
                         class="img-fluid">
                 </figure>
             </div>
@@ -428,10 +460,10 @@
             <div class="py-1 p-md-0 d-flex justify-content-around align-items-center col-md-6 justify-content-md-end">
                 <p class="my-0 footer-listenTxt">Escúchanos en:</p>
                 <a href="https://open.spotify.com/artist/7HV0vLy0KmbbaZgwZ2vmis?si=URTirPgrTv2OlYW3Z39Ouw"
-                    class=" footer-link">
+                    class=" footer-link" target="_blank">
                     <i class="bi bi-spotify mx-2 fs-5 footer-link__icon">Spotify</i>
                 </a>
-                <a href="#" class="footer-link">
+                <a href="https://www.apple.com/cl/apple-music/" class="footer-link" target="_blank">
                     <i class="bi bi-apple mx-2 fs-5 footer-link__icon">MUSIC</i>
                 </a>
             </div>
